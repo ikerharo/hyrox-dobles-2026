@@ -16,7 +16,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Ar
   color:var(--ink);background:var(--bg);line-height:1.55;-webkit-font-smoothing:antialiased}
 .wrap{max-width:780px;margin:0 auto;padding:0 15px 70px}
 
-/* Hero */
 .hero{background:linear-gradient(160deg,#1c1c20 0%,#0a0a0c 100%);color:#fff;padding:34px 18px 28px;text-align:center}
 .hero .tag{color:var(--yellow);font-weight:800;letter-spacing:2.5px;font-size:12px}
 .hero h1{font-size:25px;font-weight:800;margin:8px 0 4px;line-height:1.15;letter-spacing:-.3px}
@@ -28,7 +27,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Ar
 .cd .n{font-size:44px;font-weight:800;color:var(--yellow);line-height:1;letter-spacing:-1px}
 .cd .l{font-size:11px;color:#9a9aa0;letter-spacing:1.5px;margin-top:2px}
 
-/* Nav (dark, scroll-spy) */
 nav{position:sticky;top:0;z-index:20;background:var(--black);
   border-bottom:1px solid #26262c;overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch;scrollbar-width:none}
 nav::-webkit-scrollbar{display:none}
@@ -36,7 +34,6 @@ nav a{display:inline-block;padding:13px 13px;font-size:13px;color:#9a9aa0;text-d
   border-bottom:2.5px solid transparent;transition:color .15s}
 nav a.active{color:var(--yellow);border-bottom-color:var(--yellow)}
 
-/* Sections */
 section{background:var(--card);border-radius:16px;padding:20px;margin-top:16px;box-shadow:var(--shadow);scroll-margin-top:58px}
 h2{font-size:19px;font-weight:800;display:flex;align-items:center;gap:9px;letter-spacing:-.2px}
 h2::before{content:"";width:5px;height:21px;background:var(--yellow);border-radius:3px;display:inline-block;flex:none}
@@ -48,7 +45,6 @@ li{position:relative;padding-left:18px;margin:6px 0;font-size:14px}
 li::before{content:"";position:absolute;left:2px;top:8px;width:6px;height:6px;background:var(--yellow);border-radius:50%}
 b,strong{color:var(--black)}
 
-/* Tables */
 .tw{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:10px 0;border:1px solid var(--line);border-radius:10px}
 table{border-collapse:collapse;width:100%;font-size:13px;min-width:430px}
 th{background:#1a1a1e;color:#fff;text-align:left;padding:9px 11px;font-weight:700}
@@ -61,27 +57,26 @@ tr:nth-child(even) td{background:#fafafb}
 .note{background:var(--hilite);border-left:4px solid var(--yellow);padding:11px 13px;border-radius:9px;font-size:13.5px;margin-top:11px}
 .green{color:var(--green);font-weight:700}
 
-/* Entrena hoy */
 .weekbox{background:linear-gradient(160deg,#1c1c20,#0c0c0e);color:#fff;border-radius:14px;padding:18px;margin:6px 0 4px}
 .weekbox .h{color:var(--yellow);font-weight:800;font-size:16px;margin-bottom:10px}
 .weekbox ol{margin:0 0 0 18px}
 .weekbox li{color:#ededf0;font-size:14px;margin:7px 0;padding-left:0}
 .weekbox li::before{display:none}
-.daystrip{margin-top:13px;border-top:1px solid #2b2b32;padding-top:11px;display:flex;gap:5px;flex-wrap:wrap}
-.daystrip .d{font-size:11px;color:#a8a8ae;background:rgba(255,255,255,.05);border-radius:7px;padding:5px 7px;flex:1;text-align:center;min-width:52px}
-.daystrip .d.now{background:var(--yellow);color:#111;font-weight:800}
-.daystrip .d b{display:block;font-size:10px;opacity:.8}
 .today{background:var(--yellow);border-radius:12px;padding:14px 16px;margin-top:14px}
 .today .l{font-size:11px;font-weight:800;letter-spacing:1px;color:#7a6500}
 .today .s{font-size:20px;font-weight:800;color:#111;margin-top:1px}
-.day{border:1px solid var(--line);border-radius:12px;padding:15px;margin-top:12px;background:#fff}
+
+.day{border:1px solid var(--line);border-radius:12px;padding:15px;margin-top:11px;background:#fff}
+.day.now{border:2px solid var(--yellow);box-shadow:0 0 0 4px rgba(255,212,0,.16)}
+.day.rest{background:#fafafb}
+.dateb{font-size:11px;font-weight:800;color:var(--grey);text-transform:uppercase;letter-spacing:.6px;margin-bottom:3px}
+.dateb .hoy{background:var(--yellow);color:#111;border-radius:6px;padding:1px 8px;margin-left:7px;letter-spacing:.5px}
 .day h4{font-size:15.5px;font-weight:800;margin-bottom:1px}
-.day .when{font-size:11.5px;color:var(--grey);font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:9px}
-.day .lab{font-weight:700;color:#111;font-size:13px;margin-top:9px}
+.day .when{font-size:11.5px;color:var(--grey);font-weight:700;text-transform:uppercase;letter-spacing:.4px;margin-bottom:9px}
 .day p{font-size:14px;margin:3px 0}
-.watch{background:#eef0f3;border-radius:9px;padding:9px 12px;font-size:13px;margin-top:9px}
-.ok{background:var(--hilite);border-radius:9px;padding:9px 12px;font-size:13px;margin-top:8px}
-.k{display:inline-block;background:#111;color:var(--yellow);border-radius:6px;padding:1px 7px;font-size:11px;font-weight:800;margin-right:5px}
+.watch{background:#eef0f3;border-radius:9px;padding:9px 12px;font-size:12.5px;margin-top:9px}
+.watch b{color:#111}
+.ok{background:var(--hilite);border-radius:9px;padding:9px 12px;font-size:12.5px;margin-top:8px}
 
 .foot{text-align:center;color:#9a9aa0;font-size:12px;margin-top:26px;padding:20px;background:var(--black);border-radius:14px}
 .foot b{color:var(--yellow)}
@@ -108,7 +103,6 @@ tr:nth-child(even) td{background:#fafafb}
   <a href="#obj">Objetivos</a>
   <a href="#cargas">Cargas</a>
   <a href="#dobles">Dobles</a>
-  <a href="#semana">Semana</a>
   <a href="#prog">Progresión</a>
   <a href="#nutri">Nutrición</a>
   <a href="#supp">Suplementos</a>
@@ -123,69 +117,14 @@ tr:nth-child(even) td{background:#fafafb}
   <div class="weekbox">
     <div class="h" id="wkTitle">📌 Esta semana</div>
     <ol id="wkGoals"></ol>
-    <div class="daystrip" id="wkDays"></div>
   </div>
   <div class="today"><div class="l">HOY · <span id="todayDay"></span></div><div class="s" id="todaySession">—</div></div>
 
-  <h3>¿Qué vas a hacer hoy? 👇</h3>
+  <h3>Tu semana, día por día <span class="muted" style="font-size:12px">(hoy resaltado)</span></h3>
+  <div id="weekCards"></div>
 
-  <div class="day">
-    <h4>🏃 Correr — Calidad ⚡</h4>
-    <div class="when">Martes · velocidad</div>
-    <p><span class="k">ESTA SEM</span><span id="qToday">—</span></p>
-    <p class="muted">Formato intervalos (desde sem 2): correr "cómodo-duro" (RPE 7-8) X min, trotar suave 2 min, repetir. Calienta 12 min antes, enfría 5 min.</p>
-    <div class="watch">⌚ <b>Apple Watch:</b> Entrenamiento → <b>Carrera al aire libre</b> (o Cinta). Mira ritmo/km, distancia, pulso.</div>
-    <div class="ok">✅ <b>Bien hecho:</b> ritmo parejo, no salir disparado. <b>Anota:</b> tiempo, ritmo/km, pulso, RPE.</div>
-  </div>
-
-  <div class="day">
-    <h4>🚶 Correr — Fácil (Z2)</h4>
-    <div class="when">Jueves · recuperación + motor</div>
-    <p><b>40-50 min</b> de trote <b>conversacional</b> (hablas en oraciones completas) + 4-6 strides de 20 s al final.</p>
-    <div class="watch">⌚ <b>Apple Watch:</b> Carrera al aire libre. Mira el <b>pulso: ~135-148</b>. Si sube, <b>baja el ritmo</b> aunque se sienta lento.</div>
-    <div class="ok">✅ <b>Bien hecho:</b> terminas sintiendo que "pude más". <b>Anota:</b> ritmo @ pulso.</div>
-  </div>
-
-  <div class="day">
-    <h4>🏞️ Correr — Largo ⚡</h4>
-    <div class="when">Sábado · resistencia</div>
-    <p><span class="k">ESTA SEM</span><span id="longToday">—</span> a ritmo fácil (Z2). En Build, últimos 2 km a ritmo objetivo.</p>
-    <div class="watch">⌚ <b>Apple Watch:</b> Carrera al aire libre. Pulso en Z2. Lleva agua + <b>electrolitos</b>.</div>
-    <div class="ok">✅ <b>Bien hecho:</b> el ritmo no se cae al final. <b>Anota:</b> km, ritmo promedio, RPE.</div>
-  </div>
-
-  <div class="day">
-    <h4>🏋️ Fuerza (Power)</h4>
-    <div class="when">Viernes (con Pato) · o solo</div>
-    <p class="lab">Circuito · RPE 7-8 (paras 2-3 reps antes del fallo):</p>
-    <p>A · Sentadilla 4×5 &nbsp;·&nbsp; B · Peso muerto rumano 3×6-8</p>
-    <p>C · Zancadas 3×20 + Dominadas/jalón 3×8-10 (superserie)</p>
-    <p>D · Push press 3×8 + Remo mancuerna 3×10 (superserie)</p>
-    <p>E · Farmers carry 3×40 m &nbsp;·&nbsp; F · Core 8-10 min</p>
-    <div class="watch">⌚ <b>Apple Watch:</b> Entrenamiento → <b>Fuerza tradicional</b>.</div>
-    <div class="ok">✅ <b>Anota:</b> peso×reps×RPE de A, B, dominadas, push press. Meta: +peso o +reps al mismo RPE.</div>
-  </div>
-
-  <div class="day">
-    <h4>🔥 Engine (motor)</h4>
-    <div class="when">Miércoles (con Pato) · o solo</div>
-    <p class="lab">Versión solo — 5 rondas, descanso mínimo:</p>
-    <p>400 m caminadora → 250 m remo → 15 sentadillas/wall balls → 10 burpees</p>
-    <div class="watch">⌚ <b>Apple Watch:</b> Entrenamiento → <b>Funcional</b> o <b>HIIT</b>.</div>
-    <div class="ok">✅ <b>Anota:</b> tiempo total + RPE. Repite y busca bajarlo.</div>
-  </div>
-
-  <div class="day">
-    <h4>🎯 Técnica (Fundational)</h4>
-    <div class="when">Lunes (con Pato) · o solo</div>
-    <p class="lab">3 rondas sin prisa (calidad de movimiento):</p>
-    <p>15 wall balls/thrusters · 10 KB swings/RDL ligero · 12 zancadas · 8 burpees con salto largo · +10 min movilidad</p>
-    <div class="watch">⌚ <b>Apple Watch:</b> Funcional. No es de cronómetro.</div>
-    <div class="ok">✅ <b>Foco:</b> técnica (wall ball al target, bisagra de cadera para el sled).</div>
-  </div>
-
-  <div class="note">🔄 <b>Si no llegaste a la clase:</b> ve a otra hora (El Templo tiene AM y PM), o haz tu versión solo. Nunca sacrifiques las 2 duras (Mar + Sáb); Lun/Jue son flexibles.</div>
-  <div class="note">📲 Después de cada sesión <b>comparte el resumen de tu Apple Watch</b> y calibro tus ritmos + tu progreso.</div>
+  <div class="note">🔄 <b>Si no llegaste a la clase:</b> ve a otra hora (El Templo tiene AM y PM) o haz tu versión solo. Nunca sacrifiques las 2 duras (Mar + Sáb); Lun/Jue son flexibles.</div>
+  <div class="note">📲 Tras cada sesión <b>comparte el resumen de tu Apple Watch</b> y calibro tus ritmos + tu progreso.</div>
 </section>
 
 <section id="correr">
@@ -218,7 +157,7 @@ tr:nth-child(even) td{background:#fafafb}
     <li><b>Consistencia &gt; heroísmo.</b> Si te cuesta ir lento: correr-caminar o guíate por pulso (Z2 ≈ 135-148).</li>
   </ul>
   <h3>4 · Qué es "el log" y cómo llevarlo</h3>
-  <p>Tu <b>registro de cada sesión</b>: qué hiciste + los números. Sirve para ver si progresas. Tu <b>Apple Watch</b> graba ritmo/pulso/distancia solo (Strava/Fitness).</p>
+  <p>Tu <b>registro de cada sesión</b>: qué hiciste + los números. Tu <b>Apple Watch</b> graba ritmo/pulso/distancia solo (Strava/Fitness).</p>
   <p><b>Anota:</b> fecha · tipo · qué hiciste · ritmos/tiempos · RPE · cómo te sentiste.</p>
   <div class="note"><b>Ejemplos:</b><br>🏃 "Mar 9 · 3×6 min · 5:20/5:18/5:22 /km · RPE 8 · parejo."<br>🏞️ "Sáb 13 · Largo 8 km · 6:15/km · pulso 150 · RPE 4 · cómodo."</div>
 </section>
@@ -280,21 +219,6 @@ tr:nth-child(even) td{background:#fafafb}
     <tr><td><b>Running</b></td><td>Los 8 km, al ritmo del más fresco</td><td>Motor, no se adelanta</td></tr>
   </table></div>
   <div class="note"><b>Transiciones (RoxZone):</b> ensayar relevos = 2-3 min gratis. Reparto a <b>validar en el mini-simulacro (sem 7)</b>.</div>
-</section>
-
-<section id="semana">
-  <h2>Semana tipo <span class="muted" style="font-size:13px">(AM · 7:00)</span></h2>
-  <div class="tw"><table>
-    <tr><th>Día</th><th>Sesión</th><th>Dónde</th></tr>
-    <tr><td>Lun</td><td>Técnica (Fundational)</td><td><b>Juntos</b></td></tr>
-    <tr><td>Mar</td><td>Calidad running ⚡</td><td>Individual</td></tr>
-    <tr><td>Mié</td><td>Engine (motor)</td><td><b>Juntos</b></td></tr>
-    <tr><td>Jue</td><td>Z2 fácil + strides</td><td>Individual</td></tr>
-    <tr><td>Vie</td><td>Power (fuerza/sled)</td><td><b>Juntos</b></td></tr>
-    <tr><td>Sáb</td><td>Tirada larga ⚡</td><td>Individual</td></tr>
-    <tr><td>Dom</td><td>Descanso / surf</td><td>—</td></tr>
-  </table></div>
-  <p class="muted">3 clases juntos + running individual. <b>⚡ = las 2 duras</b>; el resto fácil de verdad.</p>
 </section>
 
 <section id="prog">
@@ -378,7 +302,6 @@ tr:nth-child(even) td{background:#fafafb}
 </div>
 
 <script>
-// ---- Countdown + Entrena hoy (auto por fecha) ----
 var WEEKS=[
  {n:1,f:"Base & técnica",lg:"8 km Z2",q:"Tu BENCHMARK 5K (a tope, parejo) en vez de intervalos.",g:["🎯 Benchmark 5K (martes) — tu número de partida","2 clases con Pato: Engine (mié) + Power (vie)","Largo 8 km (sáb) + empezar a dormir más temprano"]},
  {n:2,f:"Base",lg:"10 km Z2",q:"Tempo 4×8 min (RPE 7-8) / 2 min trote.",g:["Subir volumen suave","3 clases con Pato","Largo 10 km, todo fácil"]},
@@ -394,38 +317,73 @@ var WEEKS=[
  {n:12,f:"Peak",lg:"SIMULACRO COMPLETO 8k+8 con Pato",q:"Corta y aguda; resto suave.",g:["🏁 Simulacro completo (ensayo general)","Probar nutrición/hidratación de carrera","Afinar"]},
  {n:13,f:"Taper / CARRERA",lg:"muy bajo",q:"Cortas con toques de ritmo.",g:["Bajar volumen 40-50%","Viaje a Acapulco + shakeout","🏁 CARRERA domingo 6 sep"]}
 ];
-var DOW=["Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"];
-var SESS={1:"Técnica (Fundational)",2:"Correr — Calidad ⚡",3:"Engine (motor)",4:"Correr — Fácil",5:"Power (fuerza)",6:"Correr — Largo ⚡",0:"Descanso / surf"};
-var DAYSHORT=[["L","Técnica"],["M","Calidad"],["M","Engine"],["J","Fácil"],["V","Power"],["S","Largo"],["D","Off"]];
+var DEF={
+ tecnica:{t:"🎯 Técnica (Fundational)",sub:"Con Pato o solo · poco fatigante",
+   body:function(){return "3 rondas sin prisa: 15 wall balls/thrusters · 10 KB swings/RDL ligero · 12 zancadas · 8 burpees con salto largo · +10 min movilidad.";},
+   w:"Funcional (no es de cronómetro).",ok:"Foco: técnica limpia (wall ball al target, bisagra de cadera para el sled)."},
+ calidad:{t:"🏃 Correr — Calidad ⚡",sub:"La sesión dura de velocidad",
+   body:function(W){return "<b>"+W.q+"</b><br><span class='muted'>Calienta 12 min fácil + intervalos 'cómodo-duro' (RPE 7-8) con trote de 2 min entre cada uno + enfría 5 min.</span>";},
+   w:"Carrera al aire libre (o Cinta). Mira ritmo/km, distancia, pulso.",ok:"Ritmo parejo, no salir disparado. Anota tiempo, ritmo/km, pulso, RPE."},
+ engine:{t:"🔥 Engine (motor)",sub:"Con Pato o solo",
+   body:function(){return "Clase con Pato. Solo: 5 rondas (descanso mínimo) — 400 m caminadora · 250 m remo · 15 sentadillas/wall balls · 10 burpees.";},
+   w:"Funcional o HIIT.",ok:"Anota tiempo total + RPE. Repite y busca bajarlo."},
+ facil:{t:"🚶 Correr — Fácil (Z2)",sub:"Recuperación + motor",
+   body:function(){return "40-50 min de trote conversacional (hablas en oraciones completas) + 4-6 strides de 20 s al final.";},
+   w:"Carrera al aire libre. Pulso ~135-148; si sube, baja el ritmo aunque se sienta lento.",ok:"Terminas sintiendo que 'pude más'. Anota ritmo @ pulso."},
+ power:{t:"🏋️ Fuerza (Power)",sub:"Con Pato o solo · RPE 7-8",
+   body:function(){return "A Sentadilla 4×5 · B Peso muerto rumano 3×6-8 · C Zancadas 3×20 + Dominadas 3×8-10 · D Push press 3×8 + Remo 3×10 · E Farmers 3×40 m · F Core 8-10 min.";},
+   w:"Fuerza tradicional.",ok:"Anota peso×reps×RPE de A, B, dominadas, push press. Meta: +peso o +reps al mismo RPE."},
+ largo:{t:"🏞️ Correr — Largo ⚡",sub:"Resistencia (la otra dura)",
+   body:function(W){return "<b>"+W.lg+"</b> a ritmo fácil (Z2). En Build, últimos 2 km a ritmo. Lleva agua + electrolitos.";},
+   w:"Carrera al aire libre. Pulso en Z2.",ok:"El ritmo no se cae al final. Anota km, ritmo promedio, RPE."},
+ descanso:{t:"😴 Descanso / surf",sub:"Recuperación",
+   body:function(){return "Día libre. Movilidad ligera o surf si se da.";},w:"—",ok:"Descansar es parte del plan."},
+ labs:{t:"😴 Descanso",sub:"Semana 1",
+   body:function(){return "Día libre — aprovecha para <b>sacar tus labs</b> (en ayuno) y <b>empezar a dormir más temprano</b>.";},w:"—",ok:"Arranque conservador."}
+};
+// orden Lun..Dom
+var PLAN=["tecnica","calidad","engine","facil","power","largo","descanso"];
+var DOWF=["Lunes","Martes","Miércoles","Jueves","Viernes","Sábado","Domingo"];
+var MON=["ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic"];
 
 (function(){
-  var race=new Date(2026,8,6), start=new Date(2026,5,8);
+  var race=new Date(2026,8,6), start=new Date(2026,5,8); // start = lunes 8 jun
   var now=new Date(); now.setHours(0,0,0,0);
   document.getElementById('cd').textContent=Math.max(0,Math.ceil((race-now)/864e5));
-  var wi=Math.floor((now-start)/(7*864e5));
-  wi=Math.max(0,Math.min(12,wi));
+  var wi=Math.floor((now-start)/(7*864e5)); wi=Math.max(0,Math.min(12,wi));
   var W=WEEKS[wi];
   document.getElementById('wkTitle').innerHTML="📌 Esta semana — Semana "+W.n+" ("+W.f+")";
   document.getElementById('wkGoals').innerHTML=W.g.map(function(x){return "<li>"+x+"</li>"}).join("");
-  document.getElementById('qToday').textContent=W.q;
-  document.getElementById('longToday').textContent=W.lg;
-  // day strip (Mon..Sun order: 1..6,0)
-  var order=[1,2,3,4,5,6,0]; var dnow=now.getDay();
-  document.getElementById('wkDays').innerHTML=order.map(function(d){
-    var i=d===0?6:d-1; var cls=(d===dnow)?"d now":"d";
-    // week1 monday rest
-    var lab=DAYSHORT[i][1]; if(W.n===1&&d===1)lab="Off";
-    return "<div class='"+cls+"'><b>"+DAYSHORT[i][0]+"</b>"+lab+"</div>";
-  }).join("");
-  // today
-  document.getElementById('todayDay').textContent=DOW[dnow];
-  var s=SESS[dnow]; if(W.n===1&&dnow===1)s="Descanso (saca labs)";
-  if(now<start)s="Arranca el 8 de junio";
-  if(now>race)s="¡Carrera completada! 🏁";
-  document.getElementById('todaySession').textContent=s;
+
+  // lunes de esta semana
+  var mon=new Date(start.getTime()+wi*7*864e5);
+  var cards="", todayTxt="—", todayName="";
+  for(var k=0;k<7;k++){
+    var d=new Date(mon.getTime()+k*864e5);
+    var type=PLAN[k];
+    if(W.n===1 && k===0) type="labs";            // sem1 lunes = labs
+    var def=DEF[type];
+    var isToday=(d.getTime()===now.getTime());
+    var rest=(type==="descanso"||type==="labs");
+    var dlabel=DOWF[k]+" "+d.getDate()+" "+MON[d.getMonth()];
+    var badge=isToday?" <span class='hoy'>HOY</span>":"";
+    cards+="<div class='day"+(isToday?" now":"")+(rest?" rest":"")+"'>"+
+      "<div class='dateb'>"+dlabel+badge+"</div>"+
+      "<h4>"+def.t+"</h4>"+
+      "<div class='when'>"+def.sub+"</div>"+
+      "<p>"+def.body(W)+"</p>"+
+      (def.w!=="—"?"<div class='watch'>⌚ <b>Apple Watch:</b> "+def.w+"</div>":"")+
+      "<div class='ok'>✅ "+def.ok+"</div>"+
+      "</div>";
+    if(isToday){todayTxt=def.t.replace(/^[^ ]+ /,'');todayName=DOWF[k];}
+  }
+  document.getElementById('weekCards').innerHTML=cards;
+  if(now<start){todayName="";todayTxt="Arranca el lunes 8 de junio";}
+  if(now>race){todayName="";todayTxt="¡Carrera completada! 🏁";}
+  document.getElementById('todayDay').textContent=todayName;
+  document.getElementById('todaySession').textContent=todayTxt;
 })();
 
-// ---- Nav scroll-spy ----
 (function(){
   var nav=document.getElementById('nav');
   var links=[].slice.call(nav.querySelectorAll('a'));
