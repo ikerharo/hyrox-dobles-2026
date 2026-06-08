@@ -6,71 +6,85 @@
 <title>HYROX Acapulco 2026 · Dobles · Iker &amp; Patricio</title>
 <style>
 :root{
-  --black:#111;--ink:#1d1d1f;--grey:#6a6a6a;--line:#e6e6e6;
-  --yellow:#FFD400;--hilite:#FFF6CC;--bg:#fafafa;--card:#fff;--green:#1a9e57;
+  --black:#0e0e10;--panel:#17171b;--ink:#1d1d1f;--grey:#6b6b70;--line:#e7e7ea;
+  --yellow:#FFD400;--hilite:#FFF7CC;--bg:#f4f4f6;--card:#fff;--green:#129e57;
+  --shadow:0 1px 3px rgba(0,0,0,.06),0 6px 18px rgba(0,0,0,.05);
 }
 *{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  color:var(--ink);background:var(--bg);line-height:1.5;-webkit-font-smoothing:antialiased}
-.wrap{max-width:760px;margin:0 auto;padding:0 16px 60px}
+  color:var(--ink);background:var(--bg);line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:780px;margin:0 auto;padding:0 15px 70px}
 
 /* Hero */
-.hero{background:var(--black);color:#fff;padding:30px 16px 26px;text-align:center}
-.hero .tag{color:var(--yellow);font-weight:800;letter-spacing:2px;font-size:13px}
-.hero h1{font-size:26px;font-weight:800;margin:8px 0 4px;line-height:1.15}
-.hero .sub{color:#cfcfcf;font-size:14px}
-.hero .meta{margin-top:14px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
-.hero .pill{background:#222;border:1px solid #333;border-radius:20px;padding:6px 12px;font-size:12px;color:#eee}
+.hero{background:linear-gradient(160deg,#1c1c20 0%,#0a0a0c 100%);color:#fff;padding:34px 18px 28px;text-align:center}
+.hero .tag{color:var(--yellow);font-weight:800;letter-spacing:2.5px;font-size:12px}
+.hero h1{font-size:25px;font-weight:800;margin:8px 0 4px;line-height:1.15;letter-spacing:-.3px}
+.hero .sub{color:#bdbdc2;font-size:14px}
+.hero .meta{margin-top:15px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+.hero .pill{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:20px;padding:6px 13px;font-size:12px;color:#eee}
 .hero .pill b{color:var(--yellow)}
-.cd{margin-top:16px}
-.cd .n{font-size:40px;font-weight:800;color:var(--yellow);line-height:1}
-.cd .l{font-size:12px;color:#bbb;letter-spacing:1px}
+.cd{margin-top:18px}
+.cd .n{font-size:44px;font-weight:800;color:var(--yellow);line-height:1;letter-spacing:-1px}
+.cd .l{font-size:11px;color:#9a9aa0;letter-spacing:1.5px;margin-top:2px}
 
-/* Nav */
-nav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);
-  border-bottom:1px solid var(--line);overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch}
-nav a{display:inline-block;padding:12px 12px;font-size:13px;color:var(--grey);text-decoration:none;font-weight:600}
-nav a:active{color:var(--black)}
+/* Nav (dark, scroll-spy) */
+nav{position:sticky;top:0;z-index:20;background:var(--black);
+  border-bottom:1px solid #26262c;overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+nav a{display:inline-block;padding:13px 13px;font-size:13px;color:#9a9aa0;text-decoration:none;font-weight:600;
+  border-bottom:2.5px solid transparent;transition:color .15s}
+nav a.active{color:var(--yellow);border-bottom-color:var(--yellow)}
 
 /* Sections */
-section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin-top:16px}
-h2{font-size:19px;font-weight:800;display:flex;align-items:center;gap:8px}
-h2::before{content:"";width:5px;height:20px;background:var(--yellow);border-radius:3px;display:inline-block}
-h3{font-size:15px;font-weight:700;margin:14px 0 6px}
+section{background:var(--card);border-radius:16px;padding:20px;margin-top:16px;box-shadow:var(--shadow);scroll-margin-top:58px}
+h2{font-size:19px;font-weight:800;display:flex;align-items:center;gap:9px;letter-spacing:-.2px}
+h2::before{content:"";width:5px;height:21px;background:var(--yellow);border-radius:3px;display:inline-block;flex:none}
+h3{font-size:15px;font-weight:700;margin:16px 0 6px}
 p{margin:6px 0;font-size:14.5px}
 .muted{color:var(--grey);font-size:13px}
 ul{margin:6px 0 6px 2px;list-style:none}
-li{position:relative;padding-left:18px;margin:5px 0;font-size:14px}
+li{position:relative;padding-left:18px;margin:6px 0;font-size:14px}
 li::before{content:"";position:absolute;left:2px;top:8px;width:6px;height:6px;background:var(--yellow);border-radius:50%}
 b,strong{color:var(--black)}
 
 /* Tables */
-.tw{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:8px 0}
-table{border-collapse:collapse;width:100%;font-size:13px;min-width:420px}
-th{background:var(--black);color:#fff;text-align:left;padding:8px 10px;font-weight:700}
-td{padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
-tr:nth-child(even) td{background:#fafafa}
+.tw{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:10px 0;border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;font-size:13px;min-width:430px}
+th{background:#1a1a1e;color:#fff;text-align:left;padding:9px 11px;font-weight:700}
+td{padding:9px 11px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:none}
+tr:nth-child(even) td{background:#fafafb}
 .hl td{background:var(--hilite)!important}
 .race td{background:var(--yellow)!important;font-weight:700}
-.tag2{display:inline-block;background:var(--black);color:var(--yellow);font-size:11px;font-weight:700;
-  padding:2px 8px;border-radius:10px;margin-left:6px}
-.note{background:var(--hilite);border-left:4px solid var(--yellow);padding:10px 12px;border-radius:8px;font-size:13.5px;margin-top:10px}
-.foot{text-align:center;color:var(--grey);font-size:12px;margin-top:24px}
+.tag2{display:inline-block;background:#1a1a1e;color:var(--yellow);font-size:11px;font-weight:700;padding:2px 9px;border-radius:11px;margin-left:6px}
+.note{background:var(--hilite);border-left:4px solid var(--yellow);padding:11px 13px;border-radius:9px;font-size:13.5px;margin-top:11px}
 .green{color:var(--green);font-weight:700}
-.weekbox{background:var(--black);color:#fff;border-radius:14px;padding:18px;margin-top:8px}
-.weekbox .h{color:var(--yellow);font-weight:800;font-size:17px;margin-bottom:8px}
+
+/* Entrena hoy */
+.weekbox{background:linear-gradient(160deg,#1c1c20,#0c0c0e);color:#fff;border-radius:14px;padding:18px;margin:6px 0 4px}
+.weekbox .h{color:var(--yellow);font-weight:800;font-size:16px;margin-bottom:10px}
 .weekbox ol{margin:0 0 0 18px}
-.weekbox li{color:#eee;font-size:14px;margin:6px 0;padding-left:0}
+.weekbox li{color:#ededf0;font-size:14px;margin:7px 0;padding-left:0}
 .weekbox li::before{display:none}
-.weekbox .days{margin-top:12px;font-size:12.5px;color:#cfcfcf;border-top:1px solid #333;padding-top:10px}
-.day{border:1px solid var(--line);border-radius:12px;padding:14px;margin-top:12px;background:#fff}
+.daystrip{margin-top:13px;border-top:1px solid #2b2b32;padding-top:11px;display:flex;gap:5px;flex-wrap:wrap}
+.daystrip .d{font-size:11px;color:#a8a8ae;background:rgba(255,255,255,.05);border-radius:7px;padding:5px 7px;flex:1;text-align:center;min-width:52px}
+.daystrip .d.now{background:var(--yellow);color:#111;font-weight:800}
+.daystrip .d b{display:block;font-size:10px;opacity:.8}
+.today{background:var(--yellow);border-radius:12px;padding:14px 16px;margin-top:14px}
+.today .l{font-size:11px;font-weight:800;letter-spacing:1px;color:#7a6500}
+.today .s{font-size:20px;font-weight:800;color:#111;margin-top:1px}
+.day{border:1px solid var(--line);border-radius:12px;padding:15px;margin-top:12px;background:#fff}
 .day h4{font-size:15.5px;font-weight:800;margin-bottom:1px}
-.day .when{font-size:12px;color:var(--grey);font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
-.day .lab{font-weight:700;color:#111;font-size:13px;margin-top:8px}
+.day .when{font-size:11.5px;color:var(--grey);font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:9px}
+.day .lab{font-weight:700;color:#111;font-size:13px;margin-top:9px}
 .day p{font-size:14px;margin:3px 0}
-.watch{background:#eef1f4;border-radius:8px;padding:9px 11px;font-size:13px;margin-top:8px}
-.watch b{color:#111}
-.ok{background:var(--hilite);border-radius:8px;padding:9px 11px;font-size:13px;margin-top:8px}
+.watch{background:#eef0f3;border-radius:9px;padding:9px 12px;font-size:13px;margin-top:9px}
+.ok{background:var(--hilite);border-radius:9px;padding:9px 12px;font-size:13px;margin-top:8px}
+.k{display:inline-block;background:#111;color:var(--yellow);border-radius:6px;padding:1px 7px;font-size:11px;font-weight:800;margin-right:5px}
+
+.foot{text-align:center;color:#9a9aa0;font-size:12px;margin-top:26px;padding:20px;background:var(--black);border-radius:14px}
+.foot b{color:var(--yellow)}
 </style>
 </head>
 <body>
@@ -81,106 +95,137 @@ tr:nth-child(even) td{background:#fafafa}
   <div class="sub">Iker &amp; Patricio</div>
   <div class="meta">
     <span class="pill">📅 Dom <b>6 sep 2026</b></span>
-    <span class="pill">🎯 Meta <b>sub-1:10</b></span>
+    <span class="pill">🎯 <b>sub-1:10</b></span>
     <span class="pill">📍 Mundo Imperial</span>
   </div>
   <div class="cd"><div class="n" id="cd">—</div><div class="l">DÍAS PARA LA CARRERA</div></div>
 </div>
 
-<nav>
+<nav id="nav">
   <a href="#hoy">🎯 Entrena hoy</a>
+  <a href="#correr">Cómo correr</a>
   <a href="#comp">Competencia</a>
   <a href="#obj">Objetivos</a>
   <a href="#cargas">Cargas</a>
   <a href="#dobles">Dobles</a>
   <a href="#semana">Semana</a>
-  <a href="#correr">Cómo correr</a>
-  <a href="#sesiones">Sesiones</a>
   <a href="#prog">Progresión</a>
   <a href="#nutri">Nutrición</a>
   <a href="#supp">Suplementos</a>
   <a href="#recup">Recuperación</a>
-  <a href="#carrera">Día de carrera</a>
+  <a href="#carrera">Carrera</a>
 </nav>
 
 <div class="wrap">
 
 <section id="hoy">
   <h2>Entrena hoy</h2>
-
   <div class="weekbox">
-    <div class="h">📌 Esta semana — Semana 1 (Base)</div>
-    <ol>
-      <li><b>Tu benchmark 5K</b> (martes) — tu número de partida. 🎯</li>
-      <li><b>2 clases con Pato</b> en El Templo: Engine (mié) + Power (vie).</li>
-      <li><b>Tirada larga 8 km</b> (sáb) + empezar a dormir más temprano.</li>
-    </ol>
-    <div class="days">5 sesiones · <b>Lun</b> descanso (saca labs) · <b>Mar</b> 5K · <b>Mié</b> Engine 7am · <b>Jue</b> fácil 40' · <b>Vie</b> Power 7am · <b>Sáb</b> largo 8k · <b>Dom</b> descanso/surf</div>
+    <div class="h" id="wkTitle">📌 Esta semana</div>
+    <ol id="wkGoals"></ol>
+    <div class="daystrip" id="wkDays"></div>
   </div>
+  <div class="today"><div class="l">HOY · <span id="todayDay"></span></div><div class="s" id="todaySession">—</div></div>
 
   <h3>¿Qué vas a hacer hoy? 👇</h3>
 
   <div class="day">
     <h4>🏃 Correr — Calidad ⚡</h4>
-    <div class="when">Martes · la sesión dura de velocidad</div>
-    <p><span class="k">Sem 1</span> Es tu <b>BENCHMARK</b>: calienta 12 min fácil → <b>5 km a tope, ritmo parejo</b> → enfría 5 min.</p>
-    <p class="muted">Desde Sem 2 son intervalos: 3×6 min "cómodo-duro" (RPE 7-8) / 2 min trote · sube a 4×8 min.</p>
-    <div class="watch">⌚ <b>Apple Watch:</b> Entrenamiento → <b>Carrera al aire libre</b> (o Cinta). Mira: ritmo/km, distancia, pulso.</div>
-    <div class="ok">✅ <b>Bien hecho:</b> ritmo parejo (no salir disparado). <b>Anota:</b> tiempo, ritmo/km, pulso, RPE.</div>
+    <div class="when">Martes · velocidad</div>
+    <p><span class="k">ESTA SEM</span><span id="qToday">—</span></p>
+    <p class="muted">Formato intervalos (desde sem 2): correr "cómodo-duro" (RPE 7-8) X min, trotar suave 2 min, repetir. Calienta 12 min antes, enfría 5 min.</p>
+    <div class="watch">⌚ <b>Apple Watch:</b> Entrenamiento → <b>Carrera al aire libre</b> (o Cinta). Mira ritmo/km, distancia, pulso.</div>
+    <div class="ok">✅ <b>Bien hecho:</b> ritmo parejo, no salir disparado. <b>Anota:</b> tiempo, ritmo/km, pulso, RPE.</div>
   </div>
 
   <div class="day">
     <h4>🚶 Correr — Fácil (Z2)</h4>
     <div class="when">Jueves · recuperación + motor</div>
-    <p><b>40-50 min</b> de trote <b>conversacional</b> (puedes hablar en oraciones completas) + 4-6 <b>strides</b> de 20 s al final.</p>
-    <div class="watch">⌚ <b>Apple Watch:</b> Carrera al aire libre. Mira el <b>pulso: mantenlo ~135-148</b>. Si sube de ahí, <b>baja el ritmo</b> (aunque se sienta muy lento).</div>
+    <p><b>40-50 min</b> de trote <b>conversacional</b> (hablas en oraciones completas) + 4-6 strides de 20 s al final.</p>
+    <div class="watch">⌚ <b>Apple Watch:</b> Carrera al aire libre. Mira el <b>pulso: ~135-148</b>. Si sube, <b>baja el ritmo</b> aunque se sienta lento.</div>
     <div class="ok">✅ <b>Bien hecho:</b> terminas sintiendo que "pude más". <b>Anota:</b> ritmo @ pulso.</div>
   </div>
 
   <div class="day">
     <h4>🏞️ Correr — Largo ⚡</h4>
-    <div class="when">Sábado · resistencia (la otra sesión dura)</div>
-    <p><span class="k">Sem 1</span> <b>8 km</b> a ritmo fácil (Z2). Sube ~1-2 km por semana. En Build, últimos 2 km a ritmo objetivo.</p>
-    <div class="watch">⌚ <b>Apple Watch:</b> Carrera al aire libre. Pulso en Z2. Lleva agua + <b>electrolitos</b> (ensayo para el calor).</div>
+    <div class="when">Sábado · resistencia</div>
+    <p><span class="k">ESTA SEM</span><span id="longToday">—</span> a ritmo fácil (Z2). En Build, últimos 2 km a ritmo objetivo.</p>
+    <div class="watch">⌚ <b>Apple Watch:</b> Carrera al aire libre. Pulso en Z2. Lleva agua + <b>electrolitos</b>.</div>
     <div class="ok">✅ <b>Bien hecho:</b> el ritmo no se cae al final. <b>Anota:</b> km, ritmo promedio, RPE.</div>
   </div>
 
   <div class="day">
     <h4>🏋️ Fuerza (Power)</h4>
-    <div class="when">Viernes (clase con Pato) · o tú solo en el gym</div>
-    <p class="lab">Circuito (RPE 7-8 = paras 2-3 reps antes del fallo):</p>
+    <div class="when">Viernes (con Pato) · o solo</div>
+    <p class="lab">Circuito · RPE 7-8 (paras 2-3 reps antes del fallo):</p>
     <p>A · Sentadilla 4×5 &nbsp;·&nbsp; B · Peso muerto rumano 3×6-8</p>
-    <p>C · Zancadas 3×20 pasos + Dominadas/jalón 3×8-10 (superserie)</p>
+    <p>C · Zancadas 3×20 + Dominadas/jalón 3×8-10 (superserie)</p>
     <p>D · Push press 3×8 + Remo mancuerna 3×10 (superserie)</p>
-    <p>E · Farmers carry 3×40 m pesado &nbsp;·&nbsp; F · Core 8-10 min</p>
+    <p>E · Farmers carry 3×40 m &nbsp;·&nbsp; F · Core 8-10 min</p>
     <div class="watch">⌚ <b>Apple Watch:</b> Entrenamiento → <b>Fuerza tradicional</b>.</div>
-    <div class="ok">✅ <b>Anota:</b> peso×reps×RPE de A, B, C(dominadas), D(push press). Meta: +peso o +reps al mismo RPE.</div>
+    <div class="ok">✅ <b>Anota:</b> peso×reps×RPE de A, B, dominadas, push press. Meta: +peso o +reps al mismo RPE.</div>
   </div>
 
   <div class="day">
     <h4>🔥 Engine (motor)</h4>
-    <div class="when">Miércoles (clase con Pato) · o tú solo</div>
+    <div class="when">Miércoles (con Pato) · o solo</div>
     <p class="lab">Versión solo — 5 rondas, descanso mínimo:</p>
-    <p>400 m caminadora &nbsp;→&nbsp; 250 m remo &nbsp;→&nbsp; 15 sentadillas/wall balls &nbsp;→&nbsp; 10 burpees</p>
+    <p>400 m caminadora → 250 m remo → 15 sentadillas/wall balls → 10 burpees</p>
     <div class="watch">⌚ <b>Apple Watch:</b> Entrenamiento → <b>Funcional</b> o <b>HIIT</b>.</div>
-    <div class="ok">✅ <b>Anota:</b> tiempo total de las 5 rondas + RPE. Repite el circuito y busca bajarlo.</div>
+    <div class="ok">✅ <b>Anota:</b> tiempo total + RPE. Repite y busca bajarlo.</div>
   </div>
 
   <div class="day">
     <h4>🎯 Técnica (Fundational)</h4>
-    <div class="when">Lunes (clase con Pato) · o tú solo</div>
+    <div class="when">Lunes (con Pato) · o solo</div>
     <p class="lab">3 rondas sin prisa (calidad de movimiento):</p>
-    <p>15 wall balls/thrusters · 10 kettlebell swings/RDL ligero · 12 zancadas · 8 burpees con salto largo · + 10 min movilidad</p>
+    <p>15 wall balls/thrusters · 10 KB swings/RDL ligero · 12 zancadas · 8 burpees con salto largo · +10 min movilidad</p>
     <div class="watch">⌚ <b>Apple Watch:</b> Funcional. No es de cronómetro.</div>
-    <div class="ok">✅ <b>Foco:</b> técnica limpia (wall ball al target, bisagra de cadera para el sled).</div>
+    <div class="ok">✅ <b>Foco:</b> técnica (wall ball al target, bisagra de cadera para el sled).</div>
   </div>
 
-  <div class="note">📲 <b>Después de cada sesión, comparte el resumen de tu Apple Watch</b> (ritmo, pulso, tiempo) y voy calibrando tus ritmos y midiendo tu progreso semana a semana.</div>
+  <div class="note">🔄 <b>Si no llegaste a la clase:</b> ve a otra hora (El Templo tiene AM y PM), o haz tu versión solo. Nunca sacrifiques las 2 duras (Mar + Sáb); Lun/Jue son flexibles.</div>
+  <div class="note">📲 Después de cada sesión <b>comparte el resumen de tu Apple Watch</b> y calibro tus ritmos + tu progreso.</div>
+</section>
+
+<section id="correr">
+  <h2>Cómo correr (de cero)</h2>
+  <p class="muted">Vienes del hierro, no del running. Aquí está todo en cristiano.</p>
+  <h3>1 · Glosario</h3>
+  <div class="tw"><table>
+    <tr><th>Término</th><th>Qué es, en cristiano</th></tr>
+    <tr><td><b>RPE</b></td><td>Qué tan duro se siente, 1-10. Tu guía #1. 3-4 = platicas · 7-8 = frases cortas, jadeas · 9-10 = no hablas.</td></tr>
+    <tr><td><b>Z2 / fácil</b></td><td>Trote lento donde <b>hablas en oraciones completas</b>. Se siente "demasiado fácil". Aquí se construye el motor.</td></tr>
+    <tr><td><b>Tempo / umbral</b></td><td>"Cómodo-duro", frases cortas, aguantable 20-40 min.</td></tr>
+    <tr><td><b>VO2 / intervalos</b></td><td>Muy duro, tramos 1-4 min, casi no hablas.</td></tr>
+    <tr><td><b>Intervalos</b></td><td>Alternar duro/fácil. "3×6 min" = 3 bloques duros de 6 min con trote de descanso entre cada uno.</td></tr>
+    <tr><td><b>Strides</b></td><td>4-6 aceleraciones suaves de ~20 s (≈80% de sprint), caminas entre cada una. NO sprint.</td></tr>
+    <tr><td><b>Split / ritmo</b></td><td>Tiempo por distancia. Corriendo = min/km. Remo/ski = /500 m.</td></tr>
+    <tr><td><b>Compromised run</b></td><td>Correr justo al salir de una estación, con piernas cansadas. Lo específico de HYROX.</td></tr>
+  </table></div>
+  <h3>2 · Intervalos paso a paso (ej. 3×6 min)</h3>
+  <p><b>1.</b> Calienta 10-12 min trote MUY fácil + un par de rectas.</p>
+  <p><b>2.</b> Bloque 1: 6 min a RPE 7-8 (frases cortas). Mira tu ritmo/km.</p>
+  <p><b>3.</b> Recupera 2 min trote muy suave / camina.</p>
+  <p><b>4.</b> Bloques 2 y 3: mismo ritmo o un poco más rápido (no más lento).</p>
+  <p><b>5.</b> Enfría 5-10 min. Total ≈ 40 min.</p>
+  <div class="note">Bien hecho = los 3 bloques casi iguales. Si el último se cae mucho → empezaste muy rápido.</div>
+  <h3>3 · Cómo EMPIEZAS a mejorar</h3>
+  <ul>
+    <li><b>Corre fácil el ~80% del tiempo.</b> El error del gym: correr todo medio-duro → te cansas y no mejoras.</li>
+    <li>Sube volumen <b>≤10%/semana</b> (a 93 kg, tus tendones necesitan adaptarse).</li>
+    <li>Solo <b>2 días duros</b> (Mar + Sáb). El resto, fácil de verdad.</li>
+    <li><b>Consistencia &gt; heroísmo.</b> Si te cuesta ir lento: correr-caminar o guíate por pulso (Z2 ≈ 135-148).</li>
+  </ul>
+  <h3>4 · Qué es "el log" y cómo llevarlo</h3>
+  <p>Tu <b>registro de cada sesión</b>: qué hiciste + los números. Sirve para ver si progresas. Tu <b>Apple Watch</b> graba ritmo/pulso/distancia solo (Strava/Fitness).</p>
+  <p><b>Anota:</b> fecha · tipo · qué hiciste · ritmos/tiempos · RPE · cómo te sentiste.</p>
+  <div class="note"><b>Ejemplos:</b><br>🏃 "Mar 9 · 3×6 min · 5:20/5:18/5:22 /km · RPE 8 · parejo."<br>🏞️ "Sáb 13 · Largo 8 km · 6:15/km · pulso 150 · RPE 4 · cómodo."</div>
 </section>
 
 <section id="comp">
   <h2>La competencia</h2>
-  <p><b>HYROX Doubles Men</b> — Expo Mundo Imperial, Acapulco. <b>8 km de carrera</b> (8 × 1 km) intercalados con <b>8 estaciones</b>. Los dos corremos los 8 km <b>juntos</b>; las estaciones se <b>reparten</b> (uno trabaja, el otro releva — alternancia libre, sin mínimo de reps).</p>
+  <p><b>HYROX Doubles Men</b> — Expo Mundo Imperial, Acapulco. <b>8 km de carrera</b> (8 × 1 km) intercalados con <b>8 estaciones</b>. Los dos corremos los 8 km <b>juntos</b>; las estaciones se <b>reparten</b> (uno trabaja, el otro releva — alternancia libre).</p>
   <div class="note">Meta de equipo: <b>sub-1:10</b> · stretch <b>sub-1:05</b> → top ~10-15%.</div>
 </section>
 
@@ -189,29 +234,25 @@ tr:nth-child(even) td{background:#fafafa}
   <div class="tw"><table>
     <tr><th>Métrica</th><th>Meta</th></tr>
     <tr><td>Tiempo total (equipo)</td><td>sub-1:10 · stretch sub-1:05</td></tr>
-    <tr><td>Ritmo de carrera sostenido</td><td>~5:00-5:15 /km (incluso saliendo de estación)</td></tr>
+    <tr><td>Ritmo de carrera sostenido</td><td>~5:00-5:15 /km</td></tr>
     <tr><td>RoxZone (transiciones)</td><td>&lt; 5 min total</td></tr>
-    <tr><td>Desglose objetivo</td><td>Running ~40-43 min · Estaciones ~22-25 min · RoxZone &lt;5 min</td></tr>
   </table></div>
   <h3>Qué medimos <span class="tag2">sem 1 · 7 · 11</span></h3>
-  <p class="muted">El volumen es fijo → medimos el <b>TIEMPO</b> en completarlo. <b>Individual</b> (cada uno la prueba completa) y comparamos.</p>
+  <p class="muted">El volumen es fijo → medimos el <b>TIEMPO</b> en completarlo. Individual (cada uno la prueba completa) y comparamos.</p>
   <div class="tw"><table>
     <tr><th>Prueba</th><th>Cómo se mide</th><th>Meta</th></tr>
     <tr><td>5 km</td><td>correr 5 km a tope</td><td>&lt; 25 min</td></tr>
-    <tr><td>SkiErg / Row</td><td>1,000 m para tiempo (+ split /500)</td><td>línea base</td></tr>
-    <tr><td>Sled push</td><td>50 m para tiempo + peso usado</td><td>&lt; 3 min</td></tr>
-    <tr><td>Wall balls</td><td>100 reps para tiempo + reps sin parar</td><td>línea base</td></tr>
-    <tr><td>Simulacro completo</td><td>8k + 8 est. (equipo)</td><td>sub-1:10 · sem 12</td></tr>
+    <tr><td>SkiErg / Row</td><td>1,000 m para tiempo (+ /500)</td><td>base</td></tr>
+    <tr><td>Sled push</td><td>50 m para tiempo + peso</td><td>&lt; 3 min</td></tr>
+    <tr><td>Wall balls</td><td>100 reps: tiempo + sin parar</td><td>base</td></tr>
   </table></div>
-  <p class="muted">Mismo peso/distancia/ajustes cada vez y fresco → comparable. <b>Progreso = mismo volumen en menos tiempo</b> (o más reps sin parar).</p>
-  <h3>Cómo sabemos que progresamos CADA semana</h3>
+  <h3>Progreso cada semana</h3>
   <ul>
-    <li>Las sesiones que se repiten <b>SON el test</b>: intervalos del martes y largo del sábado deben mejorar (más rápido o más lejos, al mismo esfuerzo).</li>
-    <li>Carrera fácil a <b>menor pulso</b> al mismo ritmo = motor mejorando.</li>
-    <li>En clase: splits de ski/remo/sled y reps sin parar que bajan/suben.</li>
-    <li>Recuperación estable (sueño, FC reposo, RPE) mientras sube la carga.</li>
+    <li>Las sesiones repetidas <b>son el test</b>: martes y sábado deben mejorar al mismo esfuerzo.</li>
+    <li>Carrera fácil a <b>menor pulso</b> = motor mejorando.</li>
+    <li>Recuperación estable mientras sube la carga.</li>
   </ul>
-  <div class="note"><span class="green">🟢 Verde</span> = ritmos mejoran al mismo esfuerzo y recuperas bien. 🟡🔴 = ritmos planos + RPE alto + mal sueño → bajar carga.</div>
+  <div class="note"><span class="green">🟢</span> ritmos mejoran al mismo esfuerzo y recuperas bien · 🟡🔴 ritmos planos + RPE alto + mal sueño → bajar carga.</div>
 </section>
 
 <section id="cargas">
@@ -238,14 +279,14 @@ tr:nth-child(even) td{background:#fafafa}
     <tr><td><b>Comparte</b></td><td>Farmers · Wall Balls</td><td>Wall Balls (toma más: llega al target fácil)</td></tr>
     <tr><td><b>Running</b></td><td>Los 8 km, al ritmo del más fresco</td><td>Motor, no se adelanta</td></tr>
   </table></div>
-  <div class="note"><b>Transiciones (RoxZone):</b> ensayar relevos hasta que sean automáticos = 2-3 min gratis. <b>Reparto a validar</b> en el mini-simulacro (sem 7).</div>
+  <div class="note"><b>Transiciones (RoxZone):</b> ensayar relevos = 2-3 min gratis. Reparto a <b>validar en el mini-simulacro (sem 7)</b>.</div>
 </section>
 
 <section id="semana">
   <h2>Semana tipo <span class="muted" style="font-size:13px">(AM · 7:00)</span></h2>
   <div class="tw"><table>
     <tr><th>Día</th><th>Sesión</th><th>Dónde</th></tr>
-    <tr><td>Lun</td><td>Fundational (técnica)</td><td><b>Juntos</b></td></tr>
+    <tr><td>Lun</td><td>Técnica (Fundational)</td><td><b>Juntos</b></td></tr>
     <tr><td>Mar</td><td>Calidad running ⚡</td><td>Individual</td></tr>
     <tr><td>Mié</td><td>Engine (motor)</td><td><b>Juntos</b></td></tr>
     <tr><td>Jue</td><td>Z2 fácil + strides</td><td>Individual</td></tr>
@@ -253,110 +294,7 @@ tr:nth-child(even) td{background:#fafafa}
     <tr><td>Sáb</td><td>Tirada larga ⚡</td><td>Individual</td></tr>
     <tr><td>Dom</td><td>Descanso / surf</td><td>—</td></tr>
   </table></div>
-  <p class="muted">3 clases juntos (Lun/Mié/Vie) + running individual. <b>⚡ = las 2 sesiones duras</b>; el resto, moderado/fácil de verdad.</p>
-</section>
-
-<section id="correr">
-  <h2>Cómo correr (de cero)</h2>
-  <p class="muted">Tú vienes del hierro, no del running. Aquí está todo en cristiano — sin asumir que ya sabes la jerga.</p>
-
-  <h3>1 · El glosario (qué significa cada palabra)</h3>
-  <div class="tw"><table>
-    <tr><th>Término</th><th>Qué es, en cristiano</th></tr>
-    <tr><td><b>RPE</b></td><td>Qué tan duro se siente, del 1 al 10. Tu guía #1 (más que el reloj). 3-4 = puedes platicar · 7-8 = solo frases cortas, jadeas · 9-10 = no puedes hablar.</td></tr>
-    <tr><td><b>Z2 / "fácil"</b></td><td>Trote LENTO y cómodo donde <b>puedes hablar en oraciones completas</b>. Debe sentirse "demasiado fácil". Aquí se construye el motor — la mayoría de tus corridas van aquí.</td></tr>
-    <tr><td><b>Tempo / umbral</b></td><td>"Cómodo-duro". Solo frases cortas. Lo aguantarías 20-40 min. Sube tu techo de velocidad.</td></tr>
-    <tr><td><b>VO2 / intervalos</b></td><td>Muy duro, tramos de 1-4 min, casi no hablas. Para velocidad pura.</td></tr>
-    <tr><td><b>Intervalos</b></td><td>Alternar duro y fácil. "3×6 min" = 3 bloques de 6 min duros, con trote suave de descanso entre cada uno.</td></tr>
-    <tr><td><b>Strides (rectas)</b></td><td>4-6 aceleraciones SUAVES de ~20 seg (como 80% de tu sprint), caminando entre cada una. Mejora soltura y técnica. NO es sprint a tope.</td></tr>
-    <tr><td><b>Ritmo / split</b></td><td>Cuánto tardas por distancia. Corriendo = min/km (ej. 5:30/km). En remo/ski sale como /500 m.</td></tr>
-    <tr><td><b>Compromised running</b></td><td>Correr JUSTO al salir de una estación, con piernas cansadas. Es lo específico de HYROX.</td></tr>
-  </table></div>
-
-  <h3>2 · Cómo hacer una sesión de intervalos, paso a paso</h3>
-  <p class="muted">Ejemplo: el martes dice "3×6 min". Esto es lo que haces:</p>
-  <p><b>1.</b> <b>Calienta</b> 10-12 min de trote MUY fácil + 3-4 ejercicios (rodillas al pecho, talones a glúteo, un par de rectas).</p>
-  <p><b>2.</b> <b>Bloque 1:</b> 6 min a RPE 7-8 ("cómodo-duro", solo frases cortas). Mira tu ritmo/km en el reloj o caminadora y recuérdalo.</p>
-  <p><b>3.</b> <b>Recupera:</b> 2 min de trote MUY suave o caminar. Respira.</p>
-  <p><b>4.</b> <b>Bloques 2 y 3:</b> repite, intentando el <b>mismo ritmo o un poco más rápido</b> (no más lento).</p>
-  <p><b>5.</b> <b>Enfría</b> 5-10 min de trote fácil. Total ≈ 40 min.</p>
-  <div class="note">Si el bloque 3 se cae mucho de ritmo → empezaste muy rápido. La próxima, parejo. <b>Bien hecho = los 3 bloques casi iguales.</b></div>
-
-  <h3>3 · Cómo EMPIEZAS a mejorar la corrida (lo más importante para ti)</h3>
-  <ul>
-    <li><b>Corre fácil la MAYORÍA del tiempo.</b> El error clásico del que viene del gym: correr todo medio-duro → te cansas y no mejoras. Apunta a ~80% fácil, ~20% duro.</li>
-    <li><b>Sube el volumen poco a poco</b> (≤10%/semana). A 93 kg, tus rodillas y tendones necesitan adaptarse a los km — la paciencia evita lesiones.</li>
-    <li><b>Solo 2 días duros/semana</b> (martes intervalos + sábado largo). El resto, fácil de verdad.</li>
-    <li><b>Usa el test de hablar:</b> en los fáciles, si no puedes decir una oración completa, vas muy rápido → baja.</li>
-    <li><b>Consistencia &gt; heroísmo.</b> Correr 3-4 veces/semana sin fallar mejora más que una sesión brutal aislada.</li>
-    <li>Si te cuesta ir lento sin acelerar: usa <b>correr-caminar</b> (ej. 4 min corre / 1 min camina) o guíate por pulso. Z2 ≈ <b>~135-148 lpm</b> para ti (lo afinamos con tu reloj).</li>
-  </ul>
-
-  <h3>4 · Qué es "el log" y cómo llevarlo</h3>
-  <p>El <b>log</b> es tu <b>registro de cada sesión</b>: qué hiciste + los números. Sirve para una sola cosa: ver si vas progresando (porque las sesiones que repites son tu test).</p>
-  <p><b>Dónde:</b> lo más fácil es un <b>reloj GPS o app</b> (Strava, Garmin, Apple Fitness, Nike Run) que graba ritmo/pulso/distancia solo. Si no, notas del cel o la bitácora del plan.</p>
-  <p><b>Qué anotar (mínimo) por sesión:</b> fecha · tipo · qué hiciste · ritmos/tiempos · RPE (1-10) · cómo te sentiste.</p>
-  <div class="note">
-    <b>Ejemplos de entrada:</b><br>
-    🏃 "Mar 9 · Intervalos 3×6 min · ritmos 5:20 / 5:18 / 5:22 /km · RPE 8 · el último costó pero parejo."<br>
-    🏞️ "Sáb 13 · Largo 8 km · 6:15/km · pulso 150 · RPE 4 · fácil y cómodo."
-  </div>
-  <p class="muted">Cada semana comparas: ¿los intervalos van más rápido al mismo RPE? ¿el fácil a menor pulso? → vas progresando. 🟢</p>
-</section>
-
-<section id="sesiones">
-  <h2>Las sesiones — qué hacer y cómo medirlo</h2>
-  <h3>Intensidad (¿lo hago bien?)</h3>
-  <div class="tw"><table>
-    <tr><th>Zona</th><th>RPE</th><th>Test de hablar</th></tr>
-    <tr><td>Z2 / fácil</td><td>3-4</td><td>Oraciones completas</td></tr>
-    <tr><td>Tempo / umbral</td><td>7-8</td><td>Frases cortas</td></tr>
-    <tr><td>VO2 / intervalos</td><td>9</td><td>Palabras sueltas</td></tr>
-    <tr><td>Fuerza</td><td>7-8</td><td>Paras 2-3 reps antes del fallo</td></tr>
-  </table></div>
-  <div class="note">🔑 Días fáciles, <b>fáciles de verdad</b>. Duro solo 2 días/semana. El error #1 es entrenar todo "a medias".</div>
-
-  <h3>🏋️ Fuerza / Power <span class="muted" style="font-size:12px">(o tu sesión de hierro solo)</span></h3>
-  <div class="tw"><table>
-    <tr><th>Ejercicio</th><th>Series × reps</th><th>RPE</th></tr>
-    <tr><td>A · Sentadilla</td><td>4 × 5</td><td>7-8</td></tr>
-    <tr><td>B · Peso muerto rumano</td><td>3 × 6-8</td><td>7-8</td></tr>
-    <tr><td>C1 · Zancadas caminando</td><td>3 × 20 pasos</td><td>7</td></tr>
-    <tr><td>C2 · Dominadas / jalón</td><td>3 × 8-10</td><td>8</td></tr>
-    <tr><td>D1 · Push press</td><td>3 × 8</td><td>7-8</td></tr>
-    <tr><td>D2 · Remo mancuerna</td><td>3 × 10</td><td>7-8</td></tr>
-    <tr><td>E · Farmers carry</td><td>3 × 40 m</td><td>pesado</td></tr>
-    <tr><td>F · Core</td><td>8-10 min</td><td>—</td></tr>
-  </table></div>
-  <p class="muted">C/D en superserie. <b>Recortar</b> bíceps/tríceps/laterales (1-2 series opcionales). <b>Registrar</b> peso×reps×RPE de A,B,C2,D1 → meta: +peso o +reps al mismo RPE.</p>
-
-  <h3>🔥 Engine / Motor <span class="muted" style="font-size:12px">(versión solo: caminadora + remo)</span></h3>
-  <p><b>5 rondas, descanso mínimo:</b> 400 m caminadora + 250 m remo + 15 sentadillas/wall balls + 10 burpees. <b>Medir:</b> tiempo total + RPE; repetir y buscar bajarlo.</p>
-
-  <h3>🏃 Running</h3>
-  <ul>
-    <li><b>Martes (calidad ⚡):</b> calentar 10-12' + <b>3×6 min</b> a RPE 7-8 / 2' trote (sube a 4×8'). Mide ritmo de cada bloque: parejos o acelerando.</li>
-    <li><b>Jueves (Z2):</b> 40-50 min conversacional + 4-6 strides. Mide ritmo @ FC.</li>
-    <li><b>Sábado (largo ⚡):</b> 8→16 km Z2 fácil; en Build, últimos 2 km a ritmo. Hidrata + electrolitos.</li>
-  </ul>
-
-  <h3>📋 Qué registrar</h3>
-  <div class="tw"><table>
-    <tr><th>Sesión</th><th>Métrica clave</th><th>Vas bien si…</th></tr>
-    <tr><td>Calidad running</td><td>ritmo intervalos + RPE</td><td>mismo RPE, más rápido</td></tr>
-    <tr><td>Z2 fácil</td><td>ritmo @ FC</td><td>menor FC al mismo ritmo</td></tr>
-    <tr><td>Largo</td><td>km + ritmo + RPE final</td><td>más km / más fácil</td></tr>
-    <tr><td>Fuerza</td><td>peso×reps×RPE</td><td>+peso o +reps</td></tr>
-    <tr><td>Engine</td><td>tiempo del circuito</td><td>mismo trabajo, menos tiempo</td></tr>
-  </table></div>
-
-  <h3>🔄 Si no llegaste al horario</h3>
-  <ul>
-    <li><b>1.</b> Ve a otra hora (El Templo tiene AM 6/7/8 y PM 6:30/7:30).</li>
-    <li><b>2.</b> Sin horario → haz <b>tu versión solo</b> ese día.</li>
-    <li><b>3.</b> Día imposible → muévela, pero <b>nunca sacrifiques las 2 duras (Mar + Sáb)</b>. Lun/Jue son los flexibles.</li>
-  </ul>
-  <div class="note"><b>Consistencia &gt; perfección.</b> 5 sesiones cumplidas valen más que 6 perfectas en papel que te saltaste.</div>
+  <p class="muted">3 clases juntos + running individual. <b>⚡ = las 2 duras</b>; el resto fácil de verdad.</p>
 </section>
 
 <section id="prog">
@@ -369,15 +307,15 @@ tr:nth-child(even) td{background:#fafafa}
     <tr class="hl"><td>4</td><td>Base — deload</td><td>8 km</td><td>Ligera</td><td>DELOAD</td></tr>
     <tr><td>5</td><td>Build</td><td>12 km</td><td>VO2 5×800</td><td>Compromised run</td></tr>
     <tr><td>6</td><td>Build</td><td>14 km</td><td>6×800</td><td>—</td></tr>
-    <tr><td>7</td><td>Build</td><td>Mini-sim</td><td>Moderada</td><td>Re-benchmark + mini-sim</td></tr>
-    <tr><td>8</td><td>Build</td><td>15-16 km</td><td>Umbral 5×1k</td><td>Pico de volumen</td></tr>
+    <tr><td>7</td><td>Build</td><td>Mini-sim</td><td>Moderada</td><td>Re-bench + mini-sim</td></tr>
+    <tr><td>8</td><td>Build</td><td>15-16 km</td><td>Umbral 5×1k</td><td>Pico volumen</td></tr>
     <tr class="hl"><td>9</td><td>Build — deload</td><td>12 km</td><td>Ligera</td><td>DELOAD</td></tr>
     <tr><td>10</td><td>Peak</td><td>Medio-sim</td><td>1k a ritmo</td><td>Medio-sim + calor</td></tr>
     <tr><td>11</td><td>Peak</td><td>14-16 km</td><td>Ritmo carrera</td><td>Estrategia cerrada</td></tr>
     <tr><td>12</td><td>Peak</td><td>SIM COMPLETO</td><td>Corta/aguda</td><td>Simulacro completo</td></tr>
     <tr class="race"><td>13</td><td>Taper</td><td>bajo</td><td>corta</td><td>CARRERA 6 sep</td></tr>
   </table></div>
-  <p class="muted">Sube volumen ≤10%/sem. Deloads (sem 4 y 9) no negociables. Paces se calibran tras el 5K.</p>
+  <p class="muted">Sube volumen ≤10%/sem. Deloads (4 y 9) no negociables. Paces se calibran tras el 5K.</p>
 </section>
 
 <section id="nutri">
@@ -393,7 +331,7 @@ tr:nth-child(even) td{background:#fafafa}
     <li><b>Pre:</b> carbo fácil + algo de proteína 1.5-2 h antes.</li>
     <li><b>Intra (&gt;60-75 min):</b> carbos líquidos + electrolitos (clave por el calor).</li>
     <li><b>Post:</b> 30-40 g proteína + carbos.</li>
-    <li><b>Semana de carrera:</b> subir carbos 2-3 días antes; bajar fibra el día previo; desayuno probado.</li>
+    <li><b>Semana de carrera:</b> subir carbos 2-3 días antes; bajar fibra el día previo.</li>
   </ul>
 </section>
 
@@ -405,7 +343,7 @@ tr:nth-child(even) td{background:#fafafa}
     <tr><td>Beta-alanina</td><td>3-5 g/día</td><td>Buffer en estaciones</td></tr>
     <tr><td>Omega-3</td><td>2-3 g EPA/DHA</td><td>Recuperación, salud CV</td></tr>
     <tr><td>Electrolitos</td><td>en sesiones</td><td>Hidratación / calor</td></tr>
-    <tr><td>Citrulina malato</td><td>6-8 g pre</td><td>Volumen de trabajo</td></tr>
+    <tr><td>Citrulina</td><td>6-8 g pre</td><td>Volumen de trabajo</td></tr>
     <tr><td>Cafeína</td><td>3-6 mg/kg pre-carrera</td><td>Rendimiento (probar antes)</td></tr>
   </table></div>
   <p class="muted">Nada nuevo el día de la carrera que no se haya probado en entreno.</p>
@@ -422,7 +360,7 @@ tr:nth-child(even) td{background:#fafafa}
 </section>
 
 <section id="carrera">
-  <h2>Día de carrera <span class="muted" style="font-size:13px">(Acapulco = calor + humedad)</span></h2>
+  <h2>Día de carrera <span class="muted" style="font-size:13px">(Acapulco = calor)</span></h2>
   <ul>
     <li><b>Aclimatación:</b> entrenar en calor (y/o sauna) las últimas 2-3 semanas.</li>
     <li><b>Hidratación + sodio</b> desde el día previo; electrolitos en cada transición.</li>
@@ -430,22 +368,77 @@ tr:nth-child(even) td{background:#fafafa}
     <li><b>Calentamiento</b> 15-20 min + repasar quién entra primero en cada estación.</li>
     <li><b>Fueling:</b> desayuno probado ~3 h antes; cafeína 45-60 min antes.</li>
   </ul>
-  <div class="note"><b>Principios:</b> el running manda · solo 2 duras/semana · transiciones ensayadas · mantener músculo (no perseguirlo) · recuperación &gt; heroísmo.</div>
 </section>
 
 <div class="foot">
-  Vamos por el sub-1:10. 🏁<br>
+  Vamos por el <b>sub-1:10</b>. 🏁<br>
   Plan vivo — se ajusta con los benchmarks y cómo nos sintamos.
 </div>
 
 </div>
 
 <script>
+// ---- Countdown + Entrena hoy (auto por fecha) ----
+var WEEKS=[
+ {n:1,f:"Base & técnica",lg:"8 km Z2",q:"Tu BENCHMARK 5K (a tope, parejo) en vez de intervalos.",g:["🎯 Benchmark 5K (martes) — tu número de partida","2 clases con Pato: Engine (mié) + Power (vie)","Largo 8 km (sáb) + empezar a dormir más temprano"]},
+ {n:2,f:"Base",lg:"10 km Z2",q:"Tempo 4×8 min (RPE 7-8) / 2 min trote.",g:["Subir volumen suave","3 clases con Pato","Largo 10 km, todo fácil"]},
+ {n:3,f:"Base",lg:"12 km Z2",q:"Umbral 5×6 min / 2 min trote.",g:["Largo 12 km","Añadir strides","Mantener 80% fácil"]},
+ {n:4,f:"Base — DELOAD",lg:"8 km fácil",q:"Ligera: 2×6 min, sin exprimir.",g:["DELOAD: bajar volumen ~30%","Recuperar y asimilar","Dormir extra"]},
+ {n:5,f:"Build",lg:"12 km (últimos 2 a ritmo)",q:"VO2: 5×800 m duro / 90 s trote.",g:["Empezar compromised running (jue)","VO2 intervals (mar)","Largo con final a ritmo"]},
+ {n:6,f:"Build",lg:"14 km",q:"6×800 m o 4×1 km.",g:["Subir compromised running","Largo 14 km","Sled fuerza-resistencia"]},
+ {n:7,f:"Build",lg:"Mini-sim 4k+4est con Pato",q:"Moderada (semana de simulacro).",g:["🎯 RE-BENCHMARK","Mini-simulacro con Pato","Calibrar reparto de estaciones"]},
+ {n:8,f:"Build",lg:"15-16 km",q:"Umbral 5×1 km.",g:["Pico de volumen","Transiciones a ritmo","Largo 15-16 km"]},
+ {n:9,f:"Build — DELOAD",lg:"12 km",q:"Ligera.",g:["DELOAD","Mantener algo de intensidad","Recuperar"]},
+ {n:10,f:"Peak",lg:"Medio-sim 4k+4est a ritmo",q:"1 km repeats a ritmo de carrera.",g:["Medio-simulacro con Pato","Empezar aclimatación al calor","Ritmo de carrera"]},
+ {n:11,f:"Peak",lg:"14-16 km con segmentos a ritmo",q:"Ritmo de carrera + afinar.",g:["Estrategia de dobles cerrada","Aclimatación al calor","Sostener ritmo objetivo"]},
+ {n:12,f:"Peak",lg:"SIMULACRO COMPLETO 8k+8 con Pato",q:"Corta y aguda; resto suave.",g:["🏁 Simulacro completo (ensayo general)","Probar nutrición/hidratación de carrera","Afinar"]},
+ {n:13,f:"Taper / CARRERA",lg:"muy bajo",q:"Cortas con toques de ritmo.",g:["Bajar volumen 40-50%","Viaje a Acapulco + shakeout","🏁 CARRERA domingo 6 sep"]}
+];
+var DOW=["Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"];
+var SESS={1:"Técnica (Fundational)",2:"Correr — Calidad ⚡",3:"Engine (motor)",4:"Correr — Fácil",5:"Power (fuerza)",6:"Correr — Largo ⚡",0:"Descanso / surf"};
+var DAYSHORT=[["L","Técnica"],["M","Calidad"],["M","Engine"],["J","Fácil"],["V","Power"],["S","Largo"],["D","Off"]];
+
 (function(){
-  var race=new Date(2026,8,6); // 6 sep 2026
-  var now=new Date();
-  var d=Math.max(0,Math.ceil((race-now)/86400000));
-  document.getElementById('cd').textContent=d;
+  var race=new Date(2026,8,6), start=new Date(2026,5,8);
+  var now=new Date(); now.setHours(0,0,0,0);
+  document.getElementById('cd').textContent=Math.max(0,Math.ceil((race-now)/864e5));
+  var wi=Math.floor((now-start)/(7*864e5));
+  wi=Math.max(0,Math.min(12,wi));
+  var W=WEEKS[wi];
+  document.getElementById('wkTitle').innerHTML="📌 Esta semana — Semana "+W.n+" ("+W.f+")";
+  document.getElementById('wkGoals').innerHTML=W.g.map(function(x){return "<li>"+x+"</li>"}).join("");
+  document.getElementById('qToday').textContent=W.q;
+  document.getElementById('longToday').textContent=W.lg;
+  // day strip (Mon..Sun order: 1..6,0)
+  var order=[1,2,3,4,5,6,0]; var dnow=now.getDay();
+  document.getElementById('wkDays').innerHTML=order.map(function(d){
+    var i=d===0?6:d-1; var cls=(d===dnow)?"d now":"d";
+    // week1 monday rest
+    var lab=DAYSHORT[i][1]; if(W.n===1&&d===1)lab="Off";
+    return "<div class='"+cls+"'><b>"+DAYSHORT[i][0]+"</b>"+lab+"</div>";
+  }).join("");
+  // today
+  document.getElementById('todayDay').textContent=DOW[dnow];
+  var s=SESS[dnow]; if(W.n===1&&dnow===1)s="Descanso (saca labs)";
+  if(now<start)s="Arranca el 8 de junio";
+  if(now>race)s="¡Carrera completada! 🏁";
+  document.getElementById('todaySession').textContent=s;
+})();
+
+// ---- Nav scroll-spy ----
+(function(){
+  var nav=document.getElementById('nav');
+  var links=[].slice.call(nav.querySelectorAll('a'));
+  var map=links.map(function(a){return {a:a,sec:document.querySelector(a.getAttribute('href'))}});
+  function onScroll(){
+    var y=window.scrollY+80, cur=map[0];
+    map.forEach(function(m){ if(m.sec&&m.sec.offsetTop<=y)cur=m; });
+    links.forEach(function(a){a.classList.remove('active')});
+    cur.a.classList.add('active');
+    nav.scrollTo({left:cur.a.offsetLeft-70,behavior:'smooth'});
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
 })();
 </script>
 </body>
