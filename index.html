@@ -77,6 +77,8 @@ tr:nth-child(even) td{background:#fafafb}
 .watch{background:#eef0f3;border-radius:9px;padding:9px 12px;font-size:12.5px;margin-top:9px}
 .watch b{color:#111}
 .ok{background:var(--hilite);border-radius:9px;padding:9px 12px;font-size:12.5px;margin-top:8px}
+.sched{background:#fff8d6;border:1px dashed #e3c200;border-radius:9px;padding:8px 11px;font-size:12.5px;margin:9px 0 2px}
+.sched b{color:#111}
 
 .foot{text-align:center;color:#9a9aa0;font-size:12px;margin-top:26px;padding:20px;background:var(--black);border-radius:14px}
 .foot b{color:var(--yellow)}
@@ -320,19 +322,19 @@ var WEEKS=[
 var DEF={
  tecnica:{t:"🎯 Técnica (Fundational)",sub:"Con Pato o solo · poco fatigante",
    body:function(){return "3 rondas sin prisa: 15 wall balls/thrusters · 10 KB swings/RDL ligero · 12 zancadas · 8 burpees con salto largo · +10 min movilidad.";},
-   w:"Funcional (no es de cronómetro).",ok:"Foco: técnica limpia (wall ball al target, bisagra de cadera para el sled)."},
+   w:"Funcional (no es de cronómetro).",sched:"7:00 AM · alt 6 / 8 AM o 5:30 / 6:30 / 7:30 PM",ok:"Foco: técnica limpia (wall ball al target, bisagra de cadera para el sled)."},
  calidad:{t:"🏃 Correr — Calidad ⚡",sub:"La sesión dura de velocidad",
    body:function(W){return "<b>"+W.q+"</b><br><span class='muted'>Calienta 12 min fácil + intervalos 'cómodo-duro' (RPE 7-8) con trote de 2 min entre cada uno + enfría 5 min.</span>";},
    w:"Carrera al aire libre (o Cinta). Mira ritmo/km, distancia, pulso.",ok:"Ritmo parejo, no salir disparado. Anota tiempo, ritmo/km, pulso, RPE."},
  engine:{t:"🔥 Engine (motor)",sub:"Con Pato o solo",
    body:function(){return "Clase con Pato. Solo: 5 rondas (descanso mínimo) — 400 m caminadora · 250 m remo · 15 sentadillas/wall balls · 10 burpees.";},
-   w:"Funcional o HIIT.",ok:"Anota tiempo total + RPE. Repite y busca bajarlo."},
+   w:"Funcional o HIIT.",sched:"7:00 AM · alt 6 / 8 AM o 5:30 / 6:30 / 7:30 PM",ok:"Anota tiempo total + RPE. Repite y busca bajarlo."},
  facil:{t:"🚶 Correr — Fácil (Z2)",sub:"Recuperación + motor",
    body:function(){return "40-50 min de trote conversacional (hablas en oraciones completas) + 4-6 strides de 20 s al final.";},
    w:"Carrera al aire libre. Pulso ~135-148; si sube, baja el ritmo aunque se sienta lento.",ok:"Terminas sintiendo que 'pude más'. Anota ritmo @ pulso."},
  power:{t:"🏋️ Fuerza (Power)",sub:"Con Pato o solo · RPE 7-8",
    body:function(){return "A Sentadilla 4×5 · B Peso muerto rumano 3×6-8 · C Zancadas 3×20 + Dominadas 3×8-10 · D Push press 3×8 + Remo 3×10 · E Farmers 3×40 m · F Core 8-10 min.";},
-   w:"Fuerza tradicional.",ok:"Anota peso×reps×RPE de A, B, dominadas, push press. Meta: +peso o +reps al mismo RPE."},
+   w:"Fuerza tradicional.",sched:"7:00 AM · alt 6 / 8 AM o 6:30 PM",ok:"Anota peso×reps×RPE de A, B, dominadas, push press. Meta: +peso o +reps al mismo RPE."},
  largo:{t:"🏞️ Correr — Largo ⚡",sub:"Resistencia (la otra dura)",
    body:function(W){return "<b>"+W.lg+"</b> a ritmo fácil (Z2). En Build, últimos 2 km a ritmo. Lleva agua + electrolitos.";},
    w:"Carrera al aire libre. Pulso en Z2.",ok:"El ritmo no se cae al final. Anota km, ritmo promedio, RPE."},
@@ -371,6 +373,7 @@ var MON=["ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic"
       "<div class='dateb'>"+dlabel+badge+"</div>"+
       "<h4>"+def.t+"</h4>"+
       "<div class='when'>"+def.sub+"</div>"+
+      (def.sched?"<div class='sched'>🕐 <b>Clase con Pato · El Templo:</b> "+def.sched+"</div>":"")+
       "<p>"+def.body(W)+"</p>"+
       (def.w!=="—"?"<div class='watch'>⌚ <b>Apple Watch:</b> "+def.w+"</div>":"")+
       "<div class='ok'>✅ "+def.ok+"</div>"+
