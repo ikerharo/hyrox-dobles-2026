@@ -57,6 +57,20 @@ tr:nth-child(even) td{background:#fafafa}
 .note{background:var(--hilite);border-left:4px solid var(--yellow);padding:10px 12px;border-radius:8px;font-size:13.5px;margin-top:10px}
 .foot{text-align:center;color:var(--grey);font-size:12px;margin-top:24px}
 .green{color:var(--green);font-weight:700}
+.weekbox{background:var(--black);color:#fff;border-radius:14px;padding:18px;margin-top:8px}
+.weekbox .h{color:var(--yellow);font-weight:800;font-size:17px;margin-bottom:8px}
+.weekbox ol{margin:0 0 0 18px}
+.weekbox li{color:#eee;font-size:14px;margin:6px 0;padding-left:0}
+.weekbox li::before{display:none}
+.weekbox .days{margin-top:12px;font-size:12.5px;color:#cfcfcf;border-top:1px solid #333;padding-top:10px}
+.day{border:1px solid var(--line);border-radius:12px;padding:14px;margin-top:12px;background:#fff}
+.day h4{font-size:15.5px;font-weight:800;margin-bottom:1px}
+.day .when{font-size:12px;color:var(--grey);font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
+.day .lab{font-weight:700;color:#111;font-size:13px;margin-top:8px}
+.day p{font-size:14px;margin:3px 0}
+.watch{background:#eef1f4;border-radius:8px;padding:9px 11px;font-size:13px;margin-top:8px}
+.watch b{color:#111}
+.ok{background:var(--hilite);border-radius:8px;padding:9px 11px;font-size:13px;margin-top:8px}
 </style>
 </head>
 <body>
@@ -74,6 +88,7 @@ tr:nth-child(even) td{background:#fafafa}
 </div>
 
 <nav>
+  <a href="#hoy">🎯 Entrena hoy</a>
   <a href="#comp">Competencia</a>
   <a href="#obj">Objetivos</a>
   <a href="#cargas">Cargas</a>
@@ -89,6 +104,79 @@ tr:nth-child(even) td{background:#fafafa}
 </nav>
 
 <div class="wrap">
+
+<section id="hoy">
+  <h2>Entrena hoy</h2>
+
+  <div class="weekbox">
+    <div class="h">📌 Esta semana — Semana 1 (Base)</div>
+    <ol>
+      <li><b>Tu benchmark 5K</b> (martes) — tu número de partida. 🎯</li>
+      <li><b>2 clases con Pato</b> en El Templo: Engine (mié) + Power (vie).</li>
+      <li><b>Tirada larga 8 km</b> (sáb) + empezar a dormir más temprano.</li>
+    </ol>
+    <div class="days">5 sesiones · <b>Lun</b> descanso (saca labs) · <b>Mar</b> 5K · <b>Mié</b> Engine 7am · <b>Jue</b> fácil 40' · <b>Vie</b> Power 7am · <b>Sáb</b> largo 8k · <b>Dom</b> descanso/surf</div>
+  </div>
+
+  <h3>¿Qué vas a hacer hoy? 👇</h3>
+
+  <div class="day">
+    <h4>🏃 Correr — Calidad ⚡</h4>
+    <div class="when">Martes · la sesión dura de velocidad</div>
+    <p><span class="k">Sem 1</span> Es tu <b>BENCHMARK</b>: calienta 12 min fácil → <b>5 km a tope, ritmo parejo</b> → enfría 5 min.</p>
+    <p class="muted">Desde Sem 2 son intervalos: 3×6 min "cómodo-duro" (RPE 7-8) / 2 min trote · sube a 4×8 min.</p>
+    <div class="watch">⌚ <b>Apple Watch:</b> Entrenamiento → <b>Carrera al aire libre</b> (o Cinta). Mira: ritmo/km, distancia, pulso.</div>
+    <div class="ok">✅ <b>Bien hecho:</b> ritmo parejo (no salir disparado). <b>Anota:</b> tiempo, ritmo/km, pulso, RPE.</div>
+  </div>
+
+  <div class="day">
+    <h4>🚶 Correr — Fácil (Z2)</h4>
+    <div class="when">Jueves · recuperación + motor</div>
+    <p><b>40-50 min</b> de trote <b>conversacional</b> (puedes hablar en oraciones completas) + 4-6 <b>strides</b> de 20 s al final.</p>
+    <div class="watch">⌚ <b>Apple Watch:</b> Carrera al aire libre. Mira el <b>pulso: mantenlo ~135-148</b>. Si sube de ahí, <b>baja el ritmo</b> (aunque se sienta muy lento).</div>
+    <div class="ok">✅ <b>Bien hecho:</b> terminas sintiendo que "pude más". <b>Anota:</b> ritmo @ pulso.</div>
+  </div>
+
+  <div class="day">
+    <h4>🏞️ Correr — Largo ⚡</h4>
+    <div class="when">Sábado · resistencia (la otra sesión dura)</div>
+    <p><span class="k">Sem 1</span> <b>8 km</b> a ritmo fácil (Z2). Sube ~1-2 km por semana. En Build, últimos 2 km a ritmo objetivo.</p>
+    <div class="watch">⌚ <b>Apple Watch:</b> Carrera al aire libre. Pulso en Z2. Lleva agua + <b>electrolitos</b> (ensayo para el calor).</div>
+    <div class="ok">✅ <b>Bien hecho:</b> el ritmo no se cae al final. <b>Anota:</b> km, ritmo promedio, RPE.</div>
+  </div>
+
+  <div class="day">
+    <h4>🏋️ Fuerza (Power)</h4>
+    <div class="when">Viernes (clase con Pato) · o tú solo en el gym</div>
+    <p class="lab">Circuito (RPE 7-8 = paras 2-3 reps antes del fallo):</p>
+    <p>A · Sentadilla 4×5 &nbsp;·&nbsp; B · Peso muerto rumano 3×6-8</p>
+    <p>C · Zancadas 3×20 pasos + Dominadas/jalón 3×8-10 (superserie)</p>
+    <p>D · Push press 3×8 + Remo mancuerna 3×10 (superserie)</p>
+    <p>E · Farmers carry 3×40 m pesado &nbsp;·&nbsp; F · Core 8-10 min</p>
+    <div class="watch">⌚ <b>Apple Watch:</b> Entrenamiento → <b>Fuerza tradicional</b>.</div>
+    <div class="ok">✅ <b>Anota:</b> peso×reps×RPE de A, B, C(dominadas), D(push press). Meta: +peso o +reps al mismo RPE.</div>
+  </div>
+
+  <div class="day">
+    <h4>🔥 Engine (motor)</h4>
+    <div class="when">Miércoles (clase con Pato) · o tú solo</div>
+    <p class="lab">Versión solo — 5 rondas, descanso mínimo:</p>
+    <p>400 m caminadora &nbsp;→&nbsp; 250 m remo &nbsp;→&nbsp; 15 sentadillas/wall balls &nbsp;→&nbsp; 10 burpees</p>
+    <div class="watch">⌚ <b>Apple Watch:</b> Entrenamiento → <b>Funcional</b> o <b>HIIT</b>.</div>
+    <div class="ok">✅ <b>Anota:</b> tiempo total de las 5 rondas + RPE. Repite el circuito y busca bajarlo.</div>
+  </div>
+
+  <div class="day">
+    <h4>🎯 Técnica (Fundational)</h4>
+    <div class="when">Lunes (clase con Pato) · o tú solo</div>
+    <p class="lab">3 rondas sin prisa (calidad de movimiento):</p>
+    <p>15 wall balls/thrusters · 10 kettlebell swings/RDL ligero · 12 zancadas · 8 burpees con salto largo · + 10 min movilidad</p>
+    <div class="watch">⌚ <b>Apple Watch:</b> Funcional. No es de cronómetro.</div>
+    <div class="ok">✅ <b>Foco:</b> técnica limpia (wall ball al target, bisagra de cadera para el sled).</div>
+  </div>
+
+  <div class="note">📲 <b>Después de cada sesión, comparte el resumen de tu Apple Watch</b> (ritmo, pulso, tiempo) y voy calibrando tus ritmos y midiendo tu progreso semana a semana.</div>
+</section>
 
 <section id="comp">
   <h2>La competencia</h2>
