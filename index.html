@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HYROX Acapulco 2026 · Dobles · Iker &amp; Patricio</title>
+<style>
+:root{
+  --black:#111;--ink:#1d1d1f;--grey:#6a6a6a;--line:#e6e6e6;
+  --yellow:#FFD400;--hilite:#FFF6CC;--bg:#fafafa;--card:#fff;--green:#1a9e57;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  color:var(--ink);background:var(--bg);line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px 60px}
+
+/* Hero */
+.hero{background:var(--black);color:#fff;padding:30px 16px 26px;text-align:center}
+.hero .tag{color:var(--yellow);font-weight:800;letter-spacing:2px;font-size:13px}
+.hero h1{font-size:26px;font-weight:800;margin:8px 0 4px;line-height:1.15}
+.hero .sub{color:#cfcfcf;font-size:14px}
+.hero .meta{margin-top:14px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+.hero .pill{background:#222;border:1px solid #333;border-radius:20px;padding:6px 12px;font-size:12px;color:#eee}
+.hero .pill b{color:var(--yellow)}
+.cd{margin-top:16px}
+.cd .n{font-size:40px;font-weight:800;color:var(--yellow);line-height:1}
+.cd .l{font-size:12px;color:#bbb;letter-spacing:1px}
+
+/* Nav */
+nav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch}
+nav a{display:inline-block;padding:12px 12px;font-size:13px;color:var(--grey);text-decoration:none;font-weight:600}
+nav a:active{color:var(--black)}
+
+/* Sections */
+section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin-top:16px}
+h2{font-size:19px;font-weight:800;display:flex;align-items:center;gap:8px}
+h2::before{content:"";width:5px;height:20px;background:var(--yellow);border-radius:3px;display:inline-block}
+h3{font-size:15px;font-weight:700;margin:14px 0 6px}
+p{margin:6px 0;font-size:14.5px}
+.muted{color:var(--grey);font-size:13px}
+ul{margin:6px 0 6px 2px;list-style:none}
+li{position:relative;padding-left:18px;margin:5px 0;font-size:14px}
+li::before{content:"";position:absolute;left:2px;top:8px;width:6px;height:6px;background:var(--yellow);border-radius:50%}
+b,strong{color:var(--black)}
+
+/* Tables */
+.tw{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:8px 0}
+table{border-collapse:collapse;width:100%;font-size:13px;min-width:420px}
+th{background:var(--black);color:#fff;text-align:left;padding:8px 10px;font-weight:700}
+td{padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:nth-child(even) td{background:#fafafa}
+.hl td{background:var(--hilite)!important}
+.race td{background:var(--yellow)!important;font-weight:700}
+.tag2{display:inline-block;background:var(--black);color:var(--yellow);font-size:11px;font-weight:700;
+  padding:2px 8px;border-radius:10px;margin-left:6px}
+.note{background:var(--hilite);border-left:4px solid var(--yellow);padding:10px 12px;border-radius:8px;font-size:13.5px;margin-top:10px}
+.foot{text-align:center;color:var(--grey);font-size:12px;margin-top:24px}
+.green{color:var(--green);font-weight:700}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="tag">HYROX ACAPULCO 2026</div>
+  <h1>Plan de Entrenamiento — Dobles</h1>
+  <div class="sub">Iker &amp; Patricio</div>
+  <div class="meta">
+    <span class="pill">📅 Dom <b>6 sep 2026</b></span>
+    <span class="pill">🎯 Meta <b>sub-1:10</b></span>
+    <span class="pill">📍 Mundo Imperial</span>
+  </div>
+  <div class="cd"><div class="n" id="cd">—</div><div class="l">DÍAS PARA LA CARRERA</div></div>
+</div>
+
+<nav>
+  <a href="#comp">Competencia</a>
+  <a href="#obj">Objetivos</a>
+  <a href="#cargas">Cargas</a>
+  <a href="#dobles">Dobles</a>
+  <a href="#semana">Semana</a>
+  <a href="#sesiones">Sesiones</a>
+  <a href="#prog">Progresión</a>
+  <a href="#nutri">Nutrición</a>
+  <a href="#supp">Suplementos</a>
+  <a href="#recup">Recuperación</a>
+  <a href="#carrera">Día de carrera</a>
+</nav>
+
+<div class="wrap">
+
+<section id="comp">
+  <h2>La competencia</h2>
+  <p><b>HYROX Doubles Men</b> — Expo Mundo Imperial, Acapulco. <b>8 km de carrera</b> (8 × 1 km) intercalados con <b>8 estaciones</b>. Los dos corremos los 8 km <b>juntos</b>; las estaciones se <b>reparten</b> (uno trabaja, el otro releva — alternancia libre, sin mínimo de reps).</p>
+  <div class="note">Meta de equipo: <b>sub-1:10</b> · stretch <b>sub-1:05</b> → top ~10-15%.</div>
+</section>
+
+<section id="obj">
+  <h2>Objetivos y métricas</h2>
+  <div class="tw"><table>
+    <tr><th>Métrica</th><th>Meta</th></tr>
+    <tr><td>Tiempo total (equipo)</td><td>sub-1:10 · stretch sub-1:05</td></tr>
+    <tr><td>Ritmo de carrera sostenido</td><td>~5:00-5:15 /km (incluso saliendo de estación)</td></tr>
+    <tr><td>RoxZone (transiciones)</td><td>&lt; 5 min total</td></tr>
+    <tr><td>Desglose objetivo</td><td>Running ~40-43 min · Estaciones ~22-25 min · RoxZone &lt;5 min</td></tr>
+  </table></div>
+  <h3>Qué medimos <span class="tag2">sem 1 · 7 · 11</span></h3>
+  <div class="tw"><table>
+    <tr><th>Prueba</th><th>Meta</th><th>Actual</th></tr>
+    <tr><td>5 km individual</td><td>&lt; 25 min</td><td class="muted">por medir</td></tr>
+    <tr><td>SkiErg / Row 1,000 m</td><td>línea base</td><td class="muted">por medir</td></tr>
+    <tr><td>Sled push 152 kg × 50 m</td><td>&lt; 3 min</td><td class="muted">por medir</td></tr>
+    <tr><td>Wall balls 6 kg (max)</td><td>línea base</td><td class="muted">por medir</td></tr>
+    <tr><td>Simulacro completo</td><td>progresar a sub-1:10</td><td class="muted">sem 12</td></tr>
+  </table></div>
+  <h3>Cómo sabemos que progresamos CADA semana</h3>
+  <ul>
+    <li>Las sesiones que se repiten <b>SON el test</b>: intervalos del martes y largo del sábado deben mejorar (más rápido o más lejos, al mismo esfuerzo).</li>
+    <li>Carrera fácil a <b>menor pulso</b> al mismo ritmo = motor mejorando.</li>
+    <li>En clase: splits de ski/remo/sled y reps sin parar que bajan/suben.</li>
+    <li>Recuperación estable (sueño, FC reposo, RPE) mientras sube la carga.</li>
+  </ul>
+  <div class="note"><span class="green">🟢 Verde</span> = ritmos mejoran al mismo esfuerzo y recuperas bien. 🟡🔴 = ritmos planos + RPE alto + mal sueño → bajar carga.</div>
+</section>
+
+<section id="cargas">
+  <h2>Cargas oficiales <span class="muted" style="font-size:13px">(Doubles = Open Men)</span></h2>
+  <div class="tw"><table>
+    <tr><th>#</th><th>Estación</th><th>Volumen / Carga</th></tr>
+    <tr><td>1</td><td>SkiErg</td><td>1,000 m</td></tr>
+    <tr><td>2</td><td>Sled Push</td><td>152 kg · 50 m</td></tr>
+    <tr><td>3</td><td>Sled Pull</td><td>103 kg · 50 m</td></tr>
+    <tr><td>4</td><td>Burpee Broad Jumps</td><td>80 m</td></tr>
+    <tr><td>5</td><td>Rowing</td><td>1,000 m</td></tr>
+    <tr><td>6</td><td>Farmers Carry</td><td>2 × 24 kg · 200 m</td></tr>
+    <tr><td>7</td><td>Sandbag Lunges</td><td>20 kg · 100 m</td></tr>
+    <tr><td>8</td><td>Wall Balls</td><td>6 kg · 100 reps · target 3 m</td></tr>
+  </table></div>
+</section>
+
+<section id="dobles">
+  <h2>Estrategia de dobles</h2>
+  <p class="muted">Jugar a las fortalezas de cada cuerpo.</p>
+  <div class="tw"><table>
+    <tr><th></th><th>PATO (1.68, potencia)</th><th>IKER (1.91, motor)</th></tr>
+    <tr><td><b>Lidera</b></td><td>Sled Push · Sled Pull</td><td>SkiErg · Row · Burpees · Lunges</td></tr>
+    <tr><td><b>Comparte</b></td><td>Farmers · Wall Balls</td><td>Wall Balls (toma más: llega al target fácil)</td></tr>
+    <tr><td><b>Running</b></td><td>Los 8 km, al ritmo del más fresco</td><td>Motor, no se adelanta</td></tr>
+  </table></div>
+  <div class="note"><b>Transiciones (RoxZone):</b> ensayar relevos hasta que sean automáticos = 2-3 min gratis. <b>Reparto a validar</b> en el mini-simulacro (sem 7).</div>
+</section>
+
+<section id="semana">
+  <h2>Semana tipo <span class="muted" style="font-size:13px">(AM · 7:00)</span></h2>
+  <div class="tw"><table>
+    <tr><th>Día</th><th>Sesión</th><th>Dónde</th></tr>
+    <tr><td>Lun</td><td>Fundational (técnica)</td><td><b>Juntos</b></td></tr>
+    <tr><td>Mar</td><td>Calidad running ⚡</td><td>Individual</td></tr>
+    <tr><td>Mié</td><td>Engine (motor)</td><td><b>Juntos</b></td></tr>
+    <tr><td>Jue</td><td>Z2 fácil + strides</td><td>Individual</td></tr>
+    <tr><td>Vie</td><td>Power (fuerza/sled)</td><td><b>Juntos</b></td></tr>
+    <tr><td>Sáb</td><td>Tirada larga ⚡</td><td>Individual</td></tr>
+    <tr><td>Dom</td><td>Descanso / surf</td><td>—</td></tr>
+  </table></div>
+  <p class="muted">3 clases juntos (Lun/Mié/Vie) + running individual. <b>⚡ = las 2 sesiones duras</b>; el resto, moderado/fácil de verdad.</p>
+</section>
+
+<section id="sesiones">
+  <h2>Las sesiones — qué hacer y cómo medirlo</h2>
+  <h3>Intensidad (¿lo hago bien?)</h3>
+  <div class="tw"><table>
+    <tr><th>Zona</th><th>RPE</th><th>Test de hablar</th></tr>
+    <tr><td>Z2 / fácil</td><td>3-4</td><td>Oraciones completas</td></tr>
+    <tr><td>Tempo / umbral</td><td>7-8</td><td>Frases cortas</td></tr>
+    <tr><td>VO2 / intervalos</td><td>9</td><td>Palabras sueltas</td></tr>
+    <tr><td>Fuerza</td><td>7-8</td><td>Paras 2-3 reps antes del fallo</td></tr>
+  </table></div>
+  <div class="note">🔑 Días fáciles, <b>fáciles de verdad</b>. Duro solo 2 días/semana. El error #1 es entrenar todo "a medias".</div>
+
+  <h3>🏋️ Fuerza / Power <span class="muted" style="font-size:12px">(o tu sesión de hierro solo)</span></h3>
+  <div class="tw"><table>
+    <tr><th>Ejercicio</th><th>Series × reps</th><th>RPE</th></tr>
+    <tr><td>A · Sentadilla</td><td>4 × 5</td><td>7-8</td></tr>
+    <tr><td>B · Peso muerto rumano</td><td>3 × 6-8</td><td>7-8</td></tr>
+    <tr><td>C1 · Zancadas caminando</td><td>3 × 20 pasos</td><td>7</td></tr>
+    <tr><td>C2 · Dominadas / jalón</td><td>3 × 8-10</td><td>8</td></tr>
+    <tr><td>D1 · Push press</td><td>3 × 8</td><td>7-8</td></tr>
+    <tr><td>D2 · Remo mancuerna</td><td>3 × 10</td><td>7-8</td></tr>
+    <tr><td>E · Farmers carry</td><td>3 × 40 m</td><td>pesado</td></tr>
+    <tr><td>F · Core</td><td>8-10 min</td><td>—</td></tr>
+  </table></div>
+  <p class="muted">C/D en superserie. <b>Recortar</b> bíceps/tríceps/laterales (1-2 series opcionales). <b>Registrar</b> peso×reps×RPE de A,B,C2,D1 → meta: +peso o +reps al mismo RPE.</p>
+
+  <h3>🔥 Engine / Motor <span class="muted" style="font-size:12px">(versión solo: caminadora + remo)</span></h3>
+  <p><b>5 rondas, descanso mínimo:</b> 400 m caminadora + 250 m remo + 15 sentadillas/wall balls + 10 burpees. <b>Medir:</b> tiempo total + RPE; repetir y buscar bajarlo.</p>
+
+  <h3>🏃 Running</h3>
+  <ul>
+    <li><b>Martes (calidad ⚡):</b> calentar 10-12' + <b>3×6 min</b> a RPE 7-8 / 2' trote (sube a 4×8'). Mide ritmo de cada bloque: parejos o acelerando.</li>
+    <li><b>Jueves (Z2):</b> 40-50 min conversacional + 4-6 strides. Mide ritmo @ FC.</li>
+    <li><b>Sábado (largo ⚡):</b> 8→16 km Z2 fácil; en Build, últimos 2 km a ritmo. Hidrata + electrolitos.</li>
+  </ul>
+
+  <h3>📋 Qué registrar</h3>
+  <div class="tw"><table>
+    <tr><th>Sesión</th><th>Métrica clave</th><th>Vas bien si…</th></tr>
+    <tr><td>Calidad running</td><td>ritmo intervalos + RPE</td><td>mismo RPE, más rápido</td></tr>
+    <tr><td>Z2 fácil</td><td>ritmo @ FC</td><td>menor FC al mismo ritmo</td></tr>
+    <tr><td>Largo</td><td>km + ritmo + RPE final</td><td>más km / más fácil</td></tr>
+    <tr><td>Fuerza</td><td>peso×reps×RPE</td><td>+peso o +reps</td></tr>
+    <tr><td>Engine</td><td>tiempo del circuito</td><td>mismo trabajo, menos tiempo</td></tr>
+  </table></div>
+
+  <h3>🔄 Si no llegaste al horario</h3>
+  <ul>
+    <li><b>1.</b> Ve a otra hora (El Templo tiene AM 6/7/8 y PM 6:30/7:30).</li>
+    <li><b>2.</b> Sin horario → haz <b>tu versión solo</b> ese día.</li>
+    <li><b>3.</b> Día imposible → muévela, pero <b>nunca sacrifiques las 2 duras (Mar + Sáb)</b>. Lun/Jue son los flexibles.</li>
+  </ul>
+  <div class="note"><b>Consistencia &gt; perfección.</b> 5 sesiones cumplidas valen más que 6 perfectas en papel que te saltaste.</div>
+</section>
+
+<section id="prog">
+  <h2>Progresión — 13 semanas</h2>
+  <div class="tw"><table>
+    <tr><th>Sem</th><th>Foco</th><th>Largo</th><th>Calidad</th><th>Hito</th></tr>
+    <tr><td>1</td><td>Base &amp; técnica</td><td>8 km</td><td>Tempo 3×6'</td><td>Benchmark 5K</td></tr>
+    <tr><td>2</td><td>Base</td><td>10 km</td><td>Tempo 4×8'</td><td>—</td></tr>
+    <tr><td>3</td><td>Base</td><td>12 km</td><td>Umbral 5×6'</td><td>+ strides</td></tr>
+    <tr class="hl"><td>4</td><td>Base — deload</td><td>8 km</td><td>Ligera</td><td>DELOAD</td></tr>
+    <tr><td>5</td><td>Build</td><td>12 km</td><td>VO2 5×800</td><td>Compromised run</td></tr>
+    <tr><td>6</td><td>Build</td><td>14 km</td><td>6×800</td><td>—</td></tr>
+    <tr><td>7</td><td>Build</td><td>Mini-sim</td><td>Moderada</td><td>Re-benchmark + mini-sim</td></tr>
+    <tr><td>8</td><td>Build</td><td>15-16 km</td><td>Umbral 5×1k</td><td>Pico de volumen</td></tr>
+    <tr class="hl"><td>9</td><td>Build — deload</td><td>12 km</td><td>Ligera</td><td>DELOAD</td></tr>
+    <tr><td>10</td><td>Peak</td><td>Medio-sim</td><td>1k a ritmo</td><td>Medio-sim + calor</td></tr>
+    <tr><td>11</td><td>Peak</td><td>14-16 km</td><td>Ritmo carrera</td><td>Estrategia cerrada</td></tr>
+    <tr><td>12</td><td>Peak</td><td>SIM COMPLETO</td><td>Corta/aguda</td><td>Simulacro completo</td></tr>
+    <tr class="race"><td>13</td><td>Taper</td><td>bajo</td><td>corta</td><td>CARRERA 6 sep</td></tr>
+  </table></div>
+  <p class="muted">Sube volumen ≤10%/sem. Deloads (sem 4 y 9) no negociables. Paces se calibran tras el 5K.</p>
+</section>
+
+<section id="nutri">
+  <h2>Nutrición</h2>
+  <div class="tw"><table>
+    <tr><th>Macro</th><th>Guía</th></tr>
+    <tr><td>Proteína</td><td>~2 g/kg (≈185-200 g) — conservar músculo</td></tr>
+    <tr><td>Carbohidratos</td><td>Periodizados: altos en calidad/largo; moderados en fácil/descanso</td></tr>
+    <tr><td>Grasas</td><td>~0.8-1 g/kg</td></tr>
+    <tr><td>Calorías</td><td>Mantenimiento; déficit leve solo para afinar grasa</td></tr>
+  </table></div>
+  <ul>
+    <li><b>Pre:</b> carbo fácil + algo de proteína 1.5-2 h antes.</li>
+    <li><b>Intra (&gt;60-75 min):</b> carbos líquidos + electrolitos (clave por el calor).</li>
+    <li><b>Post:</b> 30-40 g proteína + carbos.</li>
+    <li><b>Semana de carrera:</b> subir carbos 2-3 días antes; bajar fibra el día previo; desayuno probado.</li>
+  </ul>
+</section>
+
+<section id="supp">
+  <h2>Suplementos <span class="muted" style="font-size:13px">(base legal)</span></h2>
+  <div class="tw"><table>
+    <tr><th>Suplemento</th><th>Dosis</th><th>Para qué</th></tr>
+    <tr><td>Creatina</td><td>5 g/día</td><td>Fuerza, sleds, wall balls</td></tr>
+    <tr><td>Beta-alanina</td><td>3-5 g/día</td><td>Buffer en estaciones</td></tr>
+    <tr><td>Omega-3</td><td>2-3 g EPA/DHA</td><td>Recuperación, salud CV</td></tr>
+    <tr><td>Electrolitos</td><td>en sesiones</td><td>Hidratación / calor</td></tr>
+    <tr><td>Citrulina malato</td><td>6-8 g pre</td><td>Volumen de trabajo</td></tr>
+    <tr><td>Cafeína</td><td>3-6 mg/kg pre-carrera</td><td>Rendimiento (probar antes)</td></tr>
+  </table></div>
+  <p class="muted">Nada nuevo el día de la carrera que no se haya probado en entreno.</p>
+</section>
+
+<section id="recup">
+  <h2>Recuperación y sueño</h2>
+  <ul>
+    <li><b>Dormir 7.5-8 h</b> con horario consistente — es la mitad del progreso.</li>
+    <li><b>1 día de descanso total</b> + <b>deloads</b> cada 4ª semana. No se saltan.</li>
+    <li>Si la bitácora (sueño/energía/ánimo) se cae → <b>bajar carga</b>. Recuperación &gt; heroísmo.</li>
+    <li>Movilidad ligera, hidratación y proteína suficiente diario.</li>
+  </ul>
+</section>
+
+<section id="carrera">
+  <h2>Día de carrera <span class="muted" style="font-size:13px">(Acapulco = calor + humedad)</span></h2>
+  <ul>
+    <li><b>Aclimatación:</b> entrenar en calor (y/o sauna) las últimas 2-3 semanas.</li>
+    <li><b>Hidratación + sodio</b> desde el día previo; electrolitos en cada transición.</li>
+    <li><b>Pacing:</b> primeros 2 km conservadores (el calor sube la FC). Construir, no quemar.</li>
+    <li><b>Calentamiento</b> 15-20 min + repasar quién entra primero en cada estación.</li>
+    <li><b>Fueling:</b> desayuno probado ~3 h antes; cafeína 45-60 min antes.</li>
+  </ul>
+  <div class="note"><b>Principios:</b> el running manda · solo 2 duras/semana · transiciones ensayadas · mantener músculo (no perseguirlo) · recuperación &gt; heroísmo.</div>
+</section>
+
+<div class="foot">
+  Vamos por el sub-1:10. 🏁<br>
+  Plan vivo — se ajusta con los benchmarks y cómo nos sintamos.
+</div>
+
+</div>
+
+<script>
+(function(){
+  var race=new Date(2026,8,6); // 6 sep 2026
+  var now=new Date();
+  var d=Math.max(0,Math.ceil((race-now)/86400000));
+  document.getElementById('cd').textContent=d;
+})();
+</script>
+</body>
+</html>
